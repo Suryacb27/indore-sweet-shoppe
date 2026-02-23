@@ -1,0 +1,1830 @@
+<!-- Indore Sweet Shoppe Home Page -->
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Indore Sweet Shoppe | Premium Indian Sweets</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee9d2b",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-2 rounded-lg text-white">
+                    <span class="material-symbols-outlined block text-2xl">bakery_dining</span>
+                </div>
+                <div>
+                    <h1 class="text-xl font-800 tracking-tight leading-none uppercase">Indore</h1>
+                    <p class="text-[10px] tracking-[0.2em] font-medium text-primary uppercase">Sweet Shoppe</p>
+                </div>
+            </div>
+            <!-- Main Nav -->
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Mithai</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Namkeen</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Cakes</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Gifts</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Our Story</a>
+            </nav>
+            <!-- Search & Icons -->
+            <div class="flex items-center gap-6">
+                <div
+                    class="hidden md:flex items-center bg-primary/5 dark:bg-primary/10 rounded-full px-4 py-2 border border-primary/10 focus-within:border-primary/40 transition-all">
+                    <span class="material-symbols-outlined text-primary text-xl">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-400"
+                        placeholder="Search delicacies..." type="text" />
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                    <button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span
+                            class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Luxury Hero Section -->
+        <section class="relative h-[85vh] w-full overflow-hidden">
+            <div class="absolute inset-0">
+                <img class="w-full h-full object-cover" data-alt="Luxury spread of golden saffron-infused Indian sweets"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB174rd3ZajwbfrRF96lD6R1xWfGcnFHFhM1h0mEqqg7tHOJercSWojOmyQ70YIeAAsjJYjsxeynXIo1DrIkhqkTn2gA567TGpxQBbPBWwv99mHQTM1jor1dHrpu8wi82o68XNf_spd83g7cPrbPrqG044yaqGWwBbswU_H-BeCCt2SJsMF6I3_sCrGxybcy0gS_EF8EjsXCUWJdatwHMm26o4CL0Hw1LWtPP_FSEMGUyLJ3YjJkcQLPcfc4oPjpQSjGPBtg0m60g" />
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-6 h-full flex flex-col justify-center items-start text-white">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-primary font-bold text-xs uppercase tracking-widest mb-6">
+                    Est. 1952 • Authentic Indori Flavors
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6 max-w-2xl">
+                    Taste the <span class="text-primary italic">Tradition</span> of Indore
+                </h1>
+                <p class="text-lg md:text-xl text-slate-200 max-w-xl mb-10 font-light leading-relaxed">
+                    Experience the luxury of hand-crafted, saffron-infused premium Indian sweets delivered from our
+                    heritage kitchen to your doorstep.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-bold text-lg shadow-xl shadow-primary/20 transition-all flex items-center gap-2">
+                        Shop Collection <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </button>
+                    <button
+                        class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all">
+                        Festive Gifting
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Categories Section -->
+        <section class="py-24 max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-md">
+                    <h2 class="text-3xl font-800 tracking-tight text-slate-900 dark:text-slate-100 mb-4">Curated
+                        Collections</h2>
+                    <p class="text-slate-500 dark:text-slate-400">Explore our diverse range of traditional hand-crafted
+                        delicacies made with 100% pure desi ghee.</p>
+                </div>
+                <a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                    View All Categories <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mithai -->
+                <div class="group relative h-80 rounded-xl overflow-hidden cursor-pointer">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Traditional Indian Mithai assortment"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuClwy9vX7ZQTfsOU_ri54O3DB44plkfcypBNntYJV_HKAPNU8e5_QLXqMNs9kVvFCsN6-LI8pP6XC3hqYyVD3udL5sOnUCPV16mu9f54-tE5midg6nwMqn9qG6hFVvoL8wMcuVRCQ_DMCBya31jk95srHlH8XCkN8EEAcLie1X2bWctSCvQaa1O5SKBrfyabW0Ze9wrNgLJ0Jf5rsAQZZg-R-MolIBX3EGyI1cyBZOI6QRxWKCkTOAYEIf73SIRgt9KiBGr1t7IKQ" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-1">Traditional Mithai</h3>
+                        <p class="text-slate-300 text-sm">Signature Laddoos &amp; Katlis</p>
+                    </div>
+                </div>
+                <!-- Namkeen -->
+                <div class="group relative h-80 rounded-xl overflow-hidden cursor-pointer">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Spicy Indore Namkeen and Sev"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9DZBdta-hu3nWYrSAEZP46d1t8Fa5PJO_-207Ujcy4Rvv9iaMHvebpudwIks-LYPQo3M3GSXooWuQinX8TWFUaysOLfKqB6UwH07okPvXweIrREiryCRusyvLaGfmGJlZG2vM6UTEMKG3F2_BD6gBGWU0GzTXQsKYA869EivopCPz6vea_sYz2AKJM3MKWj4fflquN-TEOE1mXSsASG82WNBXfFaEHMo3qclTPtby3ZTalJKEpkcbxb-x07JJwPCt6AVwIItliw" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-1">Savory Namkeen</h3>
+                        <p class="text-slate-300 text-sm">Famous Indori Sev &amp; Snacks</p>
+                    </div>
+                </div>
+                <!-- Cakes -->
+                <div class="group relative h-80 rounded-xl overflow-hidden cursor-pointer">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Modern fusion dessert cakes"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrJJ_lHL7kVbCVH7eUqFTfeyGacvhLg3tCp9OXtQFg5oHqJSTWp7_aoHMwcYuZKTQnJom21wCANRCzznw_mIbKGiQ3hRyZ8v6x-gGRyT8C1ROAHw6PXm8coARaOBFX283ums10G-miLVQClsS7VnmZaWV8_j1h5vue3h1h5wqL0_LwsNOBnSI9Qc6Bvf7FqJW052zwnFalJa7tMna3cKL1mTbR8qXt3tdcWcUo_5sJPspnqOy9XMC-pFMNgDS2hJZIlpJtb68Rug" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="text-2xl font-bold text-white mb-1">Fusion Cakes</h3>
+                        <p class="text-slate-300 text-sm">Contemporary Celebrations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Best Sellers Grid -->
+        <section class="py-24 bg-primary/5 dark:bg-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-900 tracking-tight mb-4">Our Best Sellers</h2>
+                    <div class="h-1 w-24 bg-primary mx-auto rounded-full mb-6"></div>
+                    <p class="text-slate-500 max-w-2xl mx-auto">The flavors that made us famous. Hand-selected favorites
+                        loved by generations of Indoris.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div
+                        class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden border border-primary/10 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Golden Kesar Katli"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY3eQdkoRDpZC-7D9iOo2eNzC4LjJrpACiOoSlhhm0hdYkmc26gnAxsJfMwVovSzXjI0HuUnEuXlyf_jzHA4DNQKmBh5Je-0VCSzY1NlTDeE0DmzSbCgkhWHfYxzD8m8RtkFTWFcrkwEcdU62VLYwtPE3dw2xX8EGx7I3lXJl4mVrmD9DA-yLtHOrKRKZj5GHV5j2y9gkd2fwMhv7zgsH9T1nnOW9KYyeWs6EUX95Ti8yx8loix6SCa_9ty-A2PT-_ygYxYT5LSA" />
+                            <button
+                                class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-slate-900 shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-xl">favorite</span>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="text-xs text-slate-400 ml-1">(120)</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">Premium Kesar Katli</h3>
+                            <p class="text-slate-500 text-sm mb-4">Saffron-infused cashew delicacy</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-800 text-xl">₹850.00 <span
+                                        class="text-xs text-slate-400 font-normal">/ 500g</span></span>
+                                <button
+                                    class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded-lg transition-colors">
+                                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div
+                        class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden border border-primary/10 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Traditional Motichoor Laddoo"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD72hbq08qJGlWtUuDG5ggvIFn8wRv7iIx7DRyYlE5FCTYl2X-IlR_bzPVOrvRT8-cLkksMnaDg2cqWaxDKJSq3GqlppUjuTUEXFGzB9QfWuukwRP-jusDtR7mu-QGtVpjXHJT0Ehh9oCbDB9S0kjo08Lv1YUqrBrB06gLhNt_yhWSAXiyz1jzSD7MEGiM_Yru2jnuJgGzAUnO1x8M9voLMqvwzfsPhjhBgOerpNWD4ssZtFVDwXTcghDAR-vmvT8DFkhDnsOtdXA" />
+                            <button
+                                class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-slate-900 shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-xl">favorite</span>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm">star_half</span>
+                                <span class="text-xs text-slate-400 ml-1">(95)</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">Ghee Motichoor Laddoo</h3>
+                            <p class="text-slate-500 text-sm mb-4">Melt-in-mouth golden pearls</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-800 text-xl">₹420.00 <span
+                                        class="text-xs text-slate-400 font-normal">/ 500g</span></span>
+                                <button
+                                    class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded-lg transition-colors">
+                                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div
+                        class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden border border-primary/10 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Famous Indori Ratlami Sev"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR_6dgkVI8FB7mx5wesGp993ZDfSdoVy4Tx-V8ffCg2ttCzoG-ZG-cU8gdm1FsiW3FBg6AYN0rxHm3XRi7-PwoLcfHv84iuhrzIw3J1tcCitavrpoS9Le06jn46igX7g34A8ExTPkptbD3jnPNEqvlHL-UhQ_CY-wvPPQIzEtX4ybvVne9DZX_y9pkxeIgOOBdVcsjASiCP-9HVy65aP6ACXv50E8bAxWDzwaDB3Zea8cXZsuSiA2CB9tWFxySQMbcl9vgqf_-5Q" />
+                            <button
+                                class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-slate-900 shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-xl">favorite</span>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="text-xs text-slate-400 ml-1">(210)</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">Special Ratlami Sev</h3>
+                            <p class="text-slate-500 text-sm mb-4">Spicy, tangy &amp; perfectly crisp</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-800 text-xl">₹180.00 <span
+                                        class="text-xs text-slate-400 font-normal">/ 500g</span></span>
+                                <button
+                                    class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded-lg transition-colors">
+                                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div
+                        class="bg-background-light dark:bg-background-dark rounded-xl overflow-hidden border border-primary/10 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                data-alt="Rich Rasgulla Box"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcqi74uRx6TJddHFUwXseXY8MQQ_yZNgBArO4eIZIfvlWTy10qghbfqtT_mVr4-3MiH39_pgf6oEnUfxo-TQxf8F3UxA-PV2i1L1loagBtIB9rnonxtvg0-CvHcTiOPbQh9By55bjMmmu-71_HE3seaJ4h2F_Yc_QPNWnIvDrdqzggCLmy6_Nxkb2ZWH6zgbr3pSm7aaXmm0w41NrAWHaUq4M0n0apHd4K1-aNNn7cKLQs_y9YtX_FAP5UEqQcDiNQCvBNOdPpFg" />
+                            <button
+                                class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-slate-900 shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-xl">favorite</span>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm">star</span>
+                                <span class="text-xs text-slate-400 ml-1">(88)</span>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">Bengal Special Rasgulla</h3>
+                            <p class="text-slate-500 text-sm mb-4">Soft spongy cottage cheese balls</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary font-800 text-xl">₹350.00 <span
+                                        class="text-xs text-slate-400 font-normal">/ 1kg</span></span>
+                                <button
+                                    class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded-lg transition-colors">
+                                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Festive Gifting Banner -->
+        <section class="py-24 max-w-7xl mx-auto px-6">
+            <div class="relative bg-primary rounded-3xl overflow-hidden p-12 md:p-20 text-white">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern height="40" id="pattern-gold" patternunits="userSpaceOnUse" width="40" x="0" y="0">
+                                <path d="M0 40L40 0M0 0l40 40" fill="none" stroke="white" stroke-width="1"></path>
+                            </pattern>
+                        </defs>
+                        <rect fill="url(#pattern-gold)" height="100%" width="100%"></rect>
+                    </svg>
+                </div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-4xl md:text-5xl font-900 mb-6">Exquisite Festive Gifting</h2>
+                        <p class="text-xl text-white/90 mb-8 max-w-lg">Share the sweetness of tradition with our
+                            hand-packed, luxury gift hampers. Perfectly curated for Diwali, weddings, and corporate
+                            occasions.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <button
+                                class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-50 transition-colors">Customize
+                                Your Box</button>
+                            <button
+                                class="bg-black/20 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-black/30 transition-colors">Download
+                                Catalog</button>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <img class="rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500"
+                            data-alt="Elegant gold gift box with assorted Indian sweets"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc0jMWYkCkXdlcHFJm1og2oRR91_oNvwz2QNYc3yh0uYaHL8pGRZHPvXV1EVDeSwdr7squHwqMMTxNqZFd8TMYQxaxgmKjakOkqoRoDbtXdo7f4ChIiuZYfSgTbK2aenPYdh2efQT54pdtC7BR_KxgVdVmJKACfL-sFKOWgiGe-YJaE7ldDR5UbIpLB_h6sBlw9H14LOWZmsCm3A4BiSW3vSUemCpPXDBVhHXVZ4NuXNfLhPvDTAucOsZ9pDxajqAwuKb6OsSIwg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features/Trust Badges -->
+        <section class="py-16 border-t border-primary/10">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">eco</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Pure Desi Ghee</h4>
+                        <p class="text-sm text-slate-500">Authentic premium ingredients</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">schedule</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Fresh Daily</h4>
+                        <p class="text-sm text-slate-500">Batch-made every morning</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">public</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Global Shipping</h4>
+                        <p class="text-sm text-slate-500">Taste of Indore, anywhere</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">verified</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">Heritage Recipes</h4>
+                        <p class="text-sm text-slate-500">Passed down for 70 years</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Refined Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary p-2 rounded-lg text-white">
+                            <span class="material-symbols-outlined block">bakery_dining</span>
+                        </div>
+                        <h2 class="text-xl font-800 text-white tracking-tight leading-none">INDORE SWEETS</h2>
+                    </div>
+                    <p class="text-sm leading-relaxed text-slate-400">Bringing the authentic flavors of Malwa to the
+                        world since 1952. We believe in quality, tradition, and the sweetness of shared moments.</p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">share</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">public</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold mb-6">Explore</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Signature Mithai</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Namkeen Collection</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Bulk Orders</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Store Locator</a></li>
+                    </ul>
+                </div>
+                <!-- Support -->
+                <div>
+                    <h3 class="text-white font-bold mb-6">Customer Care</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Refunds &amp; Returns</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Track Order</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-white font-bold mb-6">Stay Updated</h3>
+                    <p class="text-sm text-slate-400 mb-6">Subscribe to receive festive offers and new product launches.
+                    </p>
+                    <form class="space-y-3">
+                        <div class="relative">
+                            <input
+                                class="w-full bg-slate-800 border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary transition-all"
+                                placeholder="Email address" type="email" />
+                        </div>
+                        <button
+                            class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>© 2024 Indore Sweet Shoppe. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <img class="h-4" data-alt="Visa payment method"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSblBY910uvhkZiUQCARfDXT4r1PS5YtEyraAajUhodwuYNsvANMUgYhhCKpb_UGZOqCb3UcKpw0bF8xjslf82dTht2j7hKo2iPnIkpHCgQVT3EtNn9icoSsppSrFth_MZVC-z_K890GiAHw_7FV5d1tCJo-H2fAg6rSwC9VZreIyVM-bnzammjRS9pmnqYk5oGdSdDjkdrpaPxa8ZAcxL--A0IrJIggDse9bryNP9I6Hd4kFy7UMuZPABTsO9pCxd2gTZKyaBg" />
+                    <img class="h-4" data-alt="Mastercard payment method"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Simvh596n-FAWijJ3C40ttUge2Dp7AgNlr5ntffUszHlSQAJpyYVH1TQLYYgbZZm_wFiDMutACcc9BOwX4Mzb0leC1Fcy8nE4_74hVYYurPCWAQU3cjBEEEXs_Eej2UC0tkoXg4VTnu596RCi7_N40u6yFmsv-MSHEhztdoQ6PpsUfqUgVU8PHeCR85KVnty08eh9jyxG8yWh5YxYdIZ6WuEr3_11Yt32ky9T4-GafZMwfFvtMkY1oD_xTlb8YDc2Zgn6273cg" />
+                    <img class="h-4" data-alt="UPI payment method"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6WOxYuGSax20f_2bnzDQW0DfGNBhJNt3FjWOBYPlyaW1IQL6Ab8I623cEgQG1IZD71JOX9N4M--GeIQrnmAAJz4m_8XVDs4CiksKA8v1vPlxfXcB8pYfZ7Y8_QJQpJLXrdYVXuMLahySiw57nx3PUkCP3o5WVKTxmdzdQSehDwCI5ycqxkf4DRiCTGATqyPvn4UuKPDfdRbV8MmrfmyWf1QcUOR_B71VrC89LmAzDYVOY4aXuLAX1nqacMDJ2eUN1-KBazlAQsg" />
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Mithai Category Listing -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Premium Kaju Katli | Indore Sweet Shoppe</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee9d2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="bg-primary p-2 rounded-lg text-white">
+                        <span class="material-symbols-outlined text-2xl">bakery_dining</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">Indore
+                            <span class="text-primary">Sweets</span>
+                        </h1>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Sweets</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Namkeen</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Gift Boxes</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Bulk Orders</a>
+                </nav>
+                <!-- Action Icons -->
+                <div class="flex items-center gap-4">
+                    <div class="relative hidden sm:block">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+                        <input
+                            class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-full text-sm focus:ring-2 focus:ring-primary w-48 lg:w-64"
+                            placeholder="Search sweets..." type="text" />
+                    </div>
+                    <button
+                        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span
+                            class="absolute top-1 right-1 bg-primary text-[10px] text-white font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                    </button>
+                    <button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Breadcrumbs -->
+        <nav class="flex mb-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+            <a class="hover:text-primary" href="#">Home</a>
+            <span class="mx-2">/</span>
+            <a class="hover:text-primary" href="#">Sweets</a>
+            <span class="mx-2">/</span>
+            <span class="text-slate-900 dark:text-slate-100">Premium Kaju Katli</span>
+        </nav>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Left: Image Gallery -->
+            <div class="lg:col-span-7 space-y-4">
+                <div
+                    class="aspect-square bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 shadow-sm">
+                    <img alt="Premium Kaju Katli box" class="w-full h-full object-cover"
+                        data-alt="A top down view of diamond shaped Kaju Katli sweets with silver foil decoration on a white plate"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDotVCvmI6hWgZhhQZnC0mHs4Nj3zPMdBn0n_qjVQhC0_-bQNtNd2CrR_zT8E4hsl8-B3RlPcxbLsLBHUACUBWnPKcjeSYiJhkcwLt_DzL5JN318_qSwoyyYcOpFtF9tsVEYTklpY7qtBUbd6ONYwpkbhojoHKBh3u7rBKi8-TLLgJcLEqhuyakyEIKC8DJfnX0YHNcL8Ek6zVOhS5J92VMAGvwy1RcxeqtkiRJ5J7Ud5_YG3lDTxxuU3_hSg-_UNL-pEnF3oaSmw" />
+                </div>
+                <div class="grid grid-cols-4 gap-4">
+                    <div
+                        class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border-2 border-primary cursor-pointer shadow-sm">
+                        <img alt="Kaju Katli detail" class="w-full h-full object-cover"
+                            data-alt="Close up of Kaju Katli pieces showing the smooth texture and silver leaf"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuByp5JOhgKq4z85YY82KmQFxJtYrumBJwfcho1IymqmTMxnBC0QWS6YVYUIyBCkKAuEbQRO1Wa23-nNAUhEcumNPg7wRUAnTgOg-LmF3_rHwYnnIpEsxn1Wp8q9at66HuD3mz3raJ1sdZz9x2qphp8s9__OdRJaCr-9I2NH8H5ud1SblWbkoZJCMe-AXBCMLV8NV-PV9Fr-n3WHqS0zv0vH-V5kiQOn-BUikBxIyh1tzaNI3c4sa8rNSArWpMx_xwM_RfOfcoBdoQ" />
+                    </div>
+                    <div
+                        class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors shadow-sm">
+                        <img alt="Traditional packing" class="w-full h-full object-cover"
+                            data-alt="Elegant decorative box packaging for Indian sweets with gold details"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCny4VWmVt7RPyYMkJV68EZDGGO_8b_G30fMssP-dbjKjqsvuWhC7B4St9YGa0bgSy5F3Lv0El70bD82y21TVxp2N7ilEacABCkZNJYIvSF2_HD2IgzKhwen1pnobGtPDhkWhpoE5b6yukc-h3f5Xpg6t7t2U3wGtenUsFyoEOPFTZWzzNRsVlQg4Z0ghIyRDjowb99tvu1_qsBwBmyjxViXoOkLMP4P70tKwFMk_qyfn5wCC59RaBFe64SjrBgSXlITjGFT9nH4A" />
+                    </div>
+                    <div
+                        class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors shadow-sm">
+                        <img alt="Cashew nuts raw material" class="w-full h-full object-cover"
+                            data-alt="Pile of premium whole cashew nuts used in making the sweets"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJHvJVPYwZLrISbqbAsbJ-wDjh1NS95ZTZdnVxu5ZWpUrY-FxHezjUQGe26Oag7apjWZP7sTnukQOd2tn1twX6Q7HSIYYoWwScHjvcP2zoH8UKhigLIvB3Nwv0OB7NqFRXG2dOGVU3fgdYCyy_JA0XDNxMFJhOmPyIhgZeUwbxm5Z8NzOn18x8OGw-c103PZurVLrADfo9T17ytNyCffi4YmulyaeAdnIsjtHPU2fFmaqQLnanGb7OViir8jJP35MyOKvDs4wlYw" />
+                    </div>
+                    <div
+                        class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors shadow-sm relative group">
+                        <img alt="Shop visual" class="w-full h-full object-cover opacity-60"
+                            data-alt="Interior view of a modern luxury Indian sweet shop with warm lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcrerEMpj5XNNAmp8LfW5AzdKLhOFxbE3YJ0fq5JIQhnWiFeIsN9qDqKGZK0WWLNLARifZ2y-C2VgiYy8yVNXHX1B0uOwnM-sha1EodXnmSzLU-aBb3NCe-oK0esCyrOwXriX0lB93YVgG84EzVqHVbIpSkr80H8aVq0Azt40HbFgJzyK98HvwxQi6GxmcDhcxuA-PyjLj80TybISq13ksi0mqMlpeHwEguCLz2yY90DMDz-C5QjCqQEjBp_vnOrYsegZoIf2LjA" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-xs font-bold text-slate-900 dark:text-white group-hover:scale-110 transition-transform">+2
+                                More</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Product Information -->
+            <div class="lg:col-span-5 space-y-8 sticky top-28 h-fit">
+                <div>
+                    <span
+                        class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded mb-3">Best
+                        Seller</span>
+                    <h2
+                        class="product-title text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-2">
+                        Premium Kaju Katli</h2>
+                    <p class="text-slate-500 dark:text-slate-400 font-medium">Handcrafted with 100% premium Grade-A
+                        cashews. The iconic taste of Indore since 1982.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex text-primary">
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-500 underline cursor-pointer">4.8 (1.2k
+                        Reviews)</span>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex items-center gap-4">
+                        <span class="text-3xl font-extrabold text-slate-900 dark:text-slate-100">₹450.00</span>
+                        <span class="text-xl text-slate-400 line-through">₹500.00</span>
+                        <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">10% OFF</span>
+                    </div>
+                    <p class="text-xs text-slate-400 italic">Inclusive of all taxes</p>
+                </div>
+                <!-- Variants Selector -->
+                <div class="space-y-4">
+                    <p class="text-sm font-bold text-slate-700 dark:text-slate-300">Select Weight</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button
+                            class="px-6 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 text-sm font-bold hover:border-primary transition-colors">250g</button>
+                        <button
+                            class="px-6 py-2.5 rounded-full border-2 border-primary bg-primary/5 text-slate-900 dark:text-slate-100 text-sm font-bold">500g</button>
+                        <button
+                            class="px-6 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 text-sm font-bold hover:border-primary transition-colors">1kg</button>
+                    </div>
+                </div>
+                <!-- Quantity & Buttons -->
+                <div class="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex items-center border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-800">
+                            <button class="px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-700"><span
+                                    class="material-symbols-outlined text-lg">remove</span></button>
+                            <span class="px-4 py-2 font-bold text-sm">1</span>
+                            <button class="px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-700"><span
+                                    class="material-symbols-outlined text-lg">add</span></button>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium">Limited stock available for today</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-3">
+                        <button
+                            class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform active:scale-95">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                            Add to Cart
+                        </button>
+                        <button
+                            class="w-full bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] font-bold py-4 rounded-xl border border-[#25D366]/30 flex items-center justify-center gap-2 transition-colors">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                                </path>
+                            </svg>
+                            Order via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- Trust Badges -->
+                <div class="grid grid-cols-3 gap-2 py-4 border-y border-slate-100 dark:border-slate-800">
+                    <div class="flex flex-col items-center text-center p-2">
+                        <span class="material-symbols-outlined text-primary mb-1">eco</span>
+                        <span class="text-[10px] font-bold uppercase text-slate-500">100% Pure</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-2">
+                        <span class="material-symbols-outlined text-primary mb-1">local_shipping</span>
+                        <span class="text-[10px] font-bold uppercase text-slate-500">Fast Delivery</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-2">
+                        <span class="material-symbols-outlined text-primary mb-1">workspace_premium</span>
+                        <span class="text-[10px] font-bold uppercase text-slate-500">Gift Box</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tabs Section -->
+        <div class="mt-20">
+            <div class="border-b border-slate-200 dark:border-slate-800">
+                <nav class="flex gap-12">
+                    <button
+                        class="border-b-2 border-primary pb-4 text-sm font-bold text-slate-900 dark:text-slate-100">Description</button>
+                    <button
+                        class="border-b-2 border-transparent pb-4 text-sm font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Ingredients</button>
+                    <button
+                        class="border-b-2 border-transparent pb-4 text-sm font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Reviews
+                        (1.2k)</button>
+                    <button
+                        class="border-b-2 border-transparent pb-4 text-sm font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Shipping
+                        Info</button>
+                </nav>
+            </div>
+            <div class="py-10 lg:grid lg:grid-cols-12 lg:gap-12">
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="prose dark:prose-invert max-w-none">
+                        <h4 class="text-xl font-bold mb-4">A Taste of Tradition</h4>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                            Our Premium Kaju Katli is more than just a sweet; it's a piece of Indore's rich culinary
+                            heritage. Each diamond-shaped piece is meticulously crafted using only premium grade
+                            cashews, carefully selected and processed to achieve that legendary melt-in-the-mouth
+                            texture.
+                        </p>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Following a secret family recipe passed down through generations, we ensure that the
+                            sweetness is perfectly balanced, never overpowering the rich, buttery flavor of the cashews.
+                            Adorned with delicate edible silver leaf (vark), it is the quintessential gift for
+                            celebrations or a luxurious treat for yourself.
+                        </p>
+                    </div>
+                    <div class="bg-primary/5 p-6 rounded-xl border border-primary/10">
+                        <h5 class="font-bold text-slate-900 dark:text-slate-100 mb-3 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">info</span>
+                            Shelf Life &amp; Storage
+                        </h5>
+                        <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc pl-5">
+                            <li>Store in a cool, dry place away from direct sunlight.</li>
+                            <li>Shelf life: 20 days from the date of manufacturing.</li>
+                            <li>Refrigeration is recommended for prolonged freshness.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:block lg:col-span-4 space-y-6">
+                    <div
+                        class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+                        <h5 class="font-bold mb-4">You might also like</h5>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 group cursor-pointer">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                                        data-alt="Close up of bright yellow Besan Ladoo sweets"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuARIth3o7nIPfqn0RUwP3NGJWNbNUjtuLK2Uuigddb7mucvjRsOwm6PQb6HwZie09fLlJ-zLG_0ouOrWVsTDaK2uf8A2n7oo_PXGF9ZLf0v_Qq7dgCQLUSnc-jqg8qrEYsm7imWWKeToZkI4BVo35Sk0l-eh4SiN2OP31VgMeAWovmnkUpfPBwT96TmLPBB1DYhsd5Y26ppqJXcB5JDT0Dra-gyssFGXWJUuWz90FtcGNK_BA435VdeRMLUsG540_rhx-_3ILHbjg" />
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold group-hover:text-primary transition-colors">Ghee Besan
+                                        Ladoo</p>
+                                    <p class="text-sm text-primary font-bold">₹350</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 group cursor-pointer">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                                        data-alt="Traditional orange Jalebi spirals being fried"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC18CfQUYUmO_-FYp-FnzqSMGNMGyQ3vJA82h2vcMeBGlTsYghRZVqIPRycth4-LIWiU81lEDrbivum1nPFD-5FnFYuSmmHHjePLoomCtaxMFnSYyaGkDlP3fO6RTBeo7wd6U10YHjEkF63XJzTaMlyP1xLQ0nfHorOZ3dnmBfINsXiUWh3tkrHCsVI2_gLxbADFMPtYOy7hASZz7S1JU82Zqbu3LEbOGU-_UJuaxRUSAQNMkNkZNDguIJ-WDQ9L8TPDGYIRkoAbQ" />
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold group-hover:text-primary transition-colors">Special
+                                        Indori Sev</p>
+                                    <p class="text-sm text-primary font-bold">₹180</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Reviews Teaser -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                <div class="flex gap-1 text-primary mb-3">
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                </div>
+                <p class="text-sm italic text-slate-600 dark:text-slate-400 mb-4">"The best Kaju Katli I've had outside
+                    of Indore. The texture is so smooth and it's not overly sweet. Packaging was perfect for gifting."
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                        <img class="w-full h-full object-cover" data-alt="Portrait of a female customer"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMgW09QzttCneUOa9Nc8RIyfHJ7JtWEfj9S5f5oxzt4xiIjaBHf-eFPFXcgoiz4BtRzLvrzFrobiEGLr4fxOBpH5l8Ym4PjIPCTh5NTAwG3Vw0H4rtcESnj-rpscBWnza04_50URGYgOReGUwal_iSPNZiuC1NOisuOW4fmDApEIWfTmSEFg6V8hWicJAEFTSdBuk0PxI_dQeNQAsw-eUQsHaeyPYoogKNPXliSyhoD9mpNudZBwEQdHbctg9cwBrI2syL786j0w" />
+                    </div>
+                    <p class="text-xs font-bold">Priya Sharma</p>
+                </div>
+            </div>
+            <div
+                class="p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                <div class="flex gap-1 text-primary mb-3">
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                </div>
+                <p class="text-sm italic text-slate-600 dark:text-slate-400 mb-4">"Authentic taste. Reminds me of my
+                    childhood visits to Indore. Fresh delivery even to Bangalore!"</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                        <img class="w-full h-full object-cover" data-alt="Portrait of a male customer"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiz-U5eGioACU33yOHTGncw1MuOPDNa9PA6N13DwQzQdd7kuE6uJ5n02O4lAPzgvSDKC3mUA-QPI9OxhsVZvOoSQLNBOwHpaHZOcbJdPT1Cgm6U0WsLoAK2_Irg9VKLVr3tx87k7GtkBA_pVjyP7OvcaOS3RtiXfjS7CKGZERIOnOVr-3HapdDQSq3P94DJGpoaMyVZ08LyrRg2PBiIY531yaIst7EiM4EBWMQFHCY60zxXYbPebUKHzx0EfppHPHFHY0RV5UDIQ" />
+                    </div>
+                    <p class="text-xs font-bold">Amit Verma</p>
+                </div>
+            </div>
+            <div
+                class="p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                <div class="flex gap-1 text-primary mb-3">
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                    <span class="material-symbols-outlined text-sm">star</span>
+                </div>
+                <p class="text-sm italic text-slate-600 dark:text-slate-400 mb-4">"Superb quality cashews. You can tell
+                    they don't use fillers. My go-to for every Diwali."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                        <img class="w-full h-full object-cover" data-alt="Portrait of a smiling male customer"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_ZfBa_rWhDYGee-jGaLxy7RjGWM8bIPUZx_If-tU8ogYjepdW3j2ch6Z9rZ_zHeAzl2gS-6_lBlyHRAL0vQnSYsfcjDRoRmikV9ioVXhGXuycZOeZ7Kuacp6P271E0rhXUNrlvL8JskckHxoXeFCPQJsMXX2m1KYcsX_6CwvlmmMCptjZ_bi014-6oqlpIBNWYDWHFU_T7W__KtXjG1hDHnMg8lkWEKcBG0In4NrPE97ZfwF-Wn0V0UqypEAYShPdltGzkD6zWw" />
+                    </div>
+                    <p class="text-xs font-bold">Rajesh Iyer</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h2 class="text-xl font-extrabold tracking-tight text-white mb-6">Indore <span
+                            class="text-primary">Sweets</span></h2>
+                    <p class="text-sm leading-relaxed mb-6">Traditional Indian sweets and savories delivered from the
+                        heart of Indore to your doorstep.</p>
+                    <div class="flex gap-4">
+                        <button
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><span
+                                class="material-symbols-outlined text-sm">social_leaderboard</span></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><span
+                                class="material-symbols-outlined text-sm">photo_camera</span></button>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Shop</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary" href="#">All Sweets</a></li>
+                        <li><a class="hover:text-primary" href="#">Namkeen Selection</a></li>
+                        <li><a class="hover:text-primary" href="#">Sugar-Free Range</a></li>
+                        <li><a class="hover:text-primary" href="#">Festive Combos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Support</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary" href="#">Track Order</a></li>
+                        <li><a class="hover:text-primary" href="#">Shipping Policy</a></li>
+                        <li><a class="hover:text-primary" href="#">Refunds &amp; Returns</a></li>
+                        <li><a class="hover:text-primary" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Newsletter</h4>
+                    <p class="text-xs mb-4 leading-relaxed">Join for exclusive offers and new product launches.</p>
+                    <div class="flex">
+                        <input
+                            class="bg-slate-800 border-none rounded-l-lg px-4 py-2 w-full text-sm focus:ring-1 focus:ring-primary"
+                            placeholder="Email" type="email" />
+                        <button class="bg-primary text-white px-4 py-2 rounded-r-lg font-bold text-sm">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs">© 2024 Indore Sweet Shoppe. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-2xl opacity-50">payments</span>
+                    <span class="material-symbols-outlined text-2xl opacity-50">credit_card</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Product Detail View -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Secure Checkout | Indore Sweet Shoppe</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee9d2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .sticky-summary {
+            position: sticky;
+            top: 2rem;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <!-- Header / Nav -->
+    <header class="border-b border-primary/10 bg-white dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary text-white p-2 rounded-lg">
+                    <span class="material-symbols-outlined text-2xl">bakery_dining</span>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">Indore
+                        <span class="text-primary">Sweet</span> Shoppe
+                    </h1>
+                    <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">Authentic Malwa Flavors
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                <a class="hover:text-primary transition-colors" href="#">Sweets</a>
+                <a class="hover:text-primary transition-colors" href="#">Namkeen</a>
+                <a class="hover:text-primary transition-colors" href="#">Gift Boxes</a>
+                <div class="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+                <button class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">help_outline</span>
+                    Support
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Left Column: Checkout Form -->
+            <div class="lg:w-2/3 space-y-8">
+                <!-- Page Title -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Secure Checkout</h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-2">Finish your order and we'll start preparing your
+                        fresh delicacies.</p>
+                </div>
+                <!-- Stepper Progress -->
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="flex items-center gap-2 text-primary font-bold">
+                        <span
+                            class="size-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">1</span>
+                        <span>Shipping</span>
+                    </div>
+                    <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
+                    <div class="flex items-center gap-2 text-slate-400 font-medium">
+                        <span
+                            class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-500 flex items-center justify-center text-sm">2</span>
+                        <span>Payment</span>
+                    </div>
+                    <div class="h-px grow bg-slate-200 dark:bg-slate-800"></div>
+                    <div class="flex items-center gap-2 text-slate-400 font-medium">
+                        <span
+                            class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-500 flex items-center justify-center text-sm">3</span>
+                        <span>Review</span>
+                    </div>
+                </div>
+                <!-- Step 1: Shipping Address -->
+                <section
+                    class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="material-symbols-outlined text-primary">local_shipping</span>
+                        <h3 class="text-xl font-bold">Shipping Address</h3>
+                    </div>
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Full
+                                Name</label>
+                            <input
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-3"
+                                placeholder="Enter recipient name" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Mobile
+                                Number</label>
+                            <div class="relative">
+                                <span
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">+91</span>
+                                <input
+                                    class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary pl-14 py-3"
+                                    placeholder="98765 43210" type="tel" />
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Pincode</label>
+                            <input
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-3"
+                                placeholder="452001" type="text" />
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Flat, House
+                                no., Building, Company, Apartment</label>
+                            <input
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-3"
+                                type="text" />
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Area, Colony,
+                                Street, Sector, Village</label>
+                            <input
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-3"
+                                type="text" />
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Landmark
+                                (Indore specific landmarks preferred)</label>
+                            <input
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent focus:ring-primary focus:border-primary px-4 py-3"
+                                placeholder="E.g. Near Rajwada, Behind 56 Dukan" type="text" />
+                        </div>
+                    </form>
+                </section>
+                <!-- Step 2: Payment Methods (Previewed State) -->
+                <section
+                    class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm opacity-60">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="material-symbols-outlined text-slate-400">payments</span>
+                        <h3 class="text-xl font-bold text-slate-400">Payment Method</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div
+                            class="p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl flex flex-col items-center gap-2 cursor-not-allowed">
+                            <span class="material-symbols-outlined text-3xl">qr_code_2</span>
+                            <span class="font-bold">UPI</span>
+                        </div>
+                        <div
+                            class="p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl flex flex-col items-center gap-2 cursor-not-allowed">
+                            <span class="material-symbols-outlined text-3xl">credit_card</span>
+                            <span class="font-bold">Card</span>
+                        </div>
+                        <div
+                            class="p-4 border-2 border-slate-100 dark:border-slate-800 rounded-xl flex flex-col items-center gap-2 cursor-not-allowed">
+                            <span class="material-symbols-outlined text-3xl">account_balance</span>
+                            <span class="font-bold">Net Banking</span>
+                        </div>
+                    </div>
+                </section>
+                <div class="flex justify-between items-center pt-6">
+                    <button
+                        class="flex items-center gap-2 text-slate-600 font-bold hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Back to Cart
+                    </button>
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white font-extrabold px-10 py-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02]">
+                        Continue to Payment
+                    </button>
+                </div>
+            </div>
+            <!-- Right Column: Order Summary -->
+            <div class="lg:w-1/3">
+                <div
+                    class="sticky-summary bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+                    <div class="p-6 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-700">
+                        <h3 class="text-lg font-extrabold">Order Summary</h3>
+                        <p class="text-xs text-slate-500 font-medium">2 items in your cart</p>
+                    </div>
+                    <div class="p-6 space-y-6">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4">
+                            <div class="size-20 rounded-lg overflow-hidden flex-shrink-0 bg-background-light">
+                                <img class="w-full h-full object-cover" data-alt="Golden Indori Poha with garnish"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzNDu2e3qzSBS18lJg-dwr0ngT_sXF8izJ8i1NLjFUL7GAGaj7upzTvy5HyBDLz_HU5Il3-ICZRGy13UCZdtkNme3ujw62whdy1VOCXj_LqNVbn7i9tHBfFXPH6tdtrrTYB9eQ4588YFS6qlghAxrbchdEv0NQBuaW2bICVijptMkmWHt2FjBEojCIaODTrcTQpoNCG_YdZWh9oXS7b8yP_Dkp4PYc_WtorFpIRoTs3_a0l-8TF06ZVhD9l8FqlXGOHXry9QovLw" />
+                            </div>
+                            <div class="flex flex-col justify-between py-1">
+                                <div>
+                                    <h4 class="font-bold text-sm">Special Indori Poha Mix</h4>
+                                    <p class="text-xs text-slate-500">500g Pack</p>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-bold text-slate-400">Qty: 1</span>
+                                    <span class="font-extrabold text-sm">₹245</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="flex gap-4">
+                            <div class="size-20 rounded-lg overflow-hidden flex-shrink-0 bg-background-light">
+                                <img class="w-full h-full object-cover" data-alt="Delicious Ghee-soaked Gulab Jamun"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5mlGbgJDqYEmuy5mQEDbaJ_gULNewq_ZLECzNHRpRoajZNfX5bj_MHoZJvisb3XS7v7ZAfQnV0-vCODqp1EK5TcEHBtXwjYOALWsqSie3MSMS4nC0D84x9781kwl-8m8MGM_yJVU2rGkShB_cndZR1GaRCBqXsXcqHCSXeznCc30ZY1VLt2RgMeLpnC2aYl36cTsnfb3-qmS64c9xoateamaopIdbuTubMXKLRG5upe0WD4jT7oYGuvMmuMs-3qfEaoypOppRgw" />
+                            </div>
+                            <div class="flex flex-col justify-between py-1">
+                                <div>
+                                    <h4 class="font-bold text-sm">Pure Ghee Gulab Jamun</h4>
+                                    <p class="text-xs text-slate-500">Box of 12</p>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs font-bold text-slate-400">Qty: 1</span>
+                                    <span class="font-extrabold text-sm">₹450</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-dashed border-slate-200 dark:border-slate-700 pt-6 space-y-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500 font-medium">Subtotal</span>
+                                <span class="font-bold">₹695.00</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500 font-medium">Delivery Fee</span>
+                                <span class="text-green-600 font-bold">FREE</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500 font-medium">Taxes (GST 5%)</span>
+                                <span class="font-bold">₹34.75</span>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-primary/5 p-4 rounded-xl border border-primary/20 flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-xl">confirmation_number</span>
+                                <span class="text-xs font-bold uppercase tracking-wider">INDORE20</span>
+                            </div>
+                            <span class="text-xs font-bold text-primary">- ₹139.00</span>
+                        </div>
+                        <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                            <div class="flex justify-between items-end mb-6">
+                                <div>
+                                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Payable
+                                    </p>
+                                    <p class="text-3xl font-extrabold text-slate-900 dark:text-white">₹590.75</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-[10px] text-green-600 font-bold">You saved ₹139 on this order</p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-extrabold py-4 rounded-xl flex items-center justify-center gap-2 group transition-all">
+                                Place Order
+                                <span
+                                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-50 dark:bg-slate-800/30 flex items-center justify-center gap-6">
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="material-symbols-outlined text-slate-400 text-lg">verified_user</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase">Secure SSL</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="material-symbols-outlined text-slate-400 text-lg">handyman</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase">Handmade</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="material-symbols-outlined text-slate-400 text-lg">local_shipping</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase">Fast Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3 opacity-50 grayscale">
+                <div class="bg-slate-500 text-white p-1 rounded">
+                    <span class="material-symbols-outlined text-xl">bakery_dining</span>
+                </div>
+                <h2 class="text-sm font-extrabold tracking-tight uppercase">Indore Sweet Shoppe</h2>
+            </div>
+            <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Return Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                <a class="hover:text-primary transition-colors" href="#">Contact Us</a>
+            </div>
+            <p class="text-xs text-slate-500 font-medium">© 2024 Indore Sweet Shoppe. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Shopping Cart Overview -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login - Indore Sweet Shoppe</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee9d2b",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .pattern-bg {
+            background-color: #fcfaf8;
+            background-image: radial-gradient(#ee9d2b11 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Top Navigation Bar -->
+    <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-4 lg:px-20 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3 text-slate-900">
+                <div class="size-8 text-primary">
+                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_6_319)">
+                            <path
+                                d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                                fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clippath id="clip0_6_319">
+                                <rect fill="white" height="48" width="48"></rect>
+                            </clippath>
+                        </defs>
+                    </svg>
+                </div>
+                <h2 class="text-slate-900 text-xl font-extrabold leading-tight tracking-tight">Indore Sweet <span
+                        class="text-primary">Shoppe</span></h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Sweets</a>
+                <a class="text-slate-700 hover:text-primary transition-colors text-sm font-semibold"
+                    href="#">Namkeen</a>
+                <a class="text-slate-700 hover:text-primary transition-colors text-sm font-semibold"
+                    href="#">Gifting</a>
+                <a class="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Our
+                    Story</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="p-2 text-slate-700 hover:bg-primary/10 rounded-full transition-all">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <button class="p-2 text-slate-700 hover:bg-primary/10 rounded-full transition-all relative">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                <span
+                    class="absolute top-1 right-1 bg-primary text-[10px] text-white font-bold px-1 rounded-full border-2 border-white">0</span>
+            </button>
+        </div>
+    </header>
+    <!-- Main Content Area -->
+    <main class="flex-grow flex items-center justify-center py-12 px-6 pattern-bg">
+        <div
+            class="w-full max-w-[460px] bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-primary/5 border border-primary/10 overflow-hidden">
+            <!-- Card Header -->
+            <div class="pt-10 pb-6 px-10 text-center">
+                <div class="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-4">
+                    <span class="material-symbols-outlined text-primary text-3xl">lock_open</span>
+                </div>
+                <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Welcome Back</h1>
+                <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">Please enter your details to access your
+                    account</p>
+            </div>
+            <!-- Login Form -->
+            <form class="px-10 pb-10 space-y-5">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2"
+                        for="identifier">Email or Phone Number</label>
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">person</span>
+                        <input
+                            class="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400"
+                            id="identifier" name="identifier" placeholder="e.g. +91 9876543210" type="text" />
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="block text-sm font-bold text-slate-700 dark:text-slate-300"
+                            for="password">Password</label>
+                        <a class="text-xs font-bold text-primary hover:underline" href="#">Forgot Password?</a>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+                        <input
+                            class="w-full pl-12 pr-12 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400"
+                            id="password" name="password" placeholder="••••••••" type="password" />
+                        <button
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors"
+                            type="button">
+                            <span class="material-symbols-outlined text-xl">visibility</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 py-1">
+                    <input class="w-4 h-4 rounded text-primary border-slate-300 focus:ring-primary cursor-pointer"
+                        id="remember" type="checkbox" />
+                    <label class="text-sm text-slate-600 dark:text-slate-400 cursor-pointer select-none font-medium"
+                        for="remember">Remember me for 30 days</label>
+                </div>
+                <button
+                    class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 transform active:scale-[0.98]"
+                    type="submit">
+                    Login to My Account
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </button>
+                <div class="relative py-4">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-slate-100 dark:border-slate-800"></div>
+                    </div>
+                    <div class="relative flex justify-center text-xs uppercase">
+                        <span class="bg-white dark:bg-slate-900 px-3 text-slate-400 font-semibold tracking-wider">Or
+                            continue with</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="flex items-center justify-center gap-2 py-2.5 px-4 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-sm font-bold text-slate-700 dark:text-slate-300"
+                        type="button">
+                        <img alt="Google logo" class="w-4 h-4" data-alt="Google colorful brand icon logo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUZ-SvfDbKXi4-yUS7ZfgyVCHxwbBYRWzmMI4vBHM6PFoUWtPQwRTpVXSCN6IHpNivCoajUt0vrGzB02JAJYSyO7aQg_m5EKeot6d3vWzaWOQLyJB3_9eGD3ZTBneDQyN8wtLMVuMkdvilccF84BhlEBlI4tOWKqO_U0phjmCggJLlysWB3ZvFDPwA6r5YyDfnMZBULoWwOmq5ZEiTGla4r9FVZ-jh1JrAWmNKiSpnu8CJjb_9C0UZNkpqEXHte-a3DiwJyk2BuQ" />
+                        Google
+                    </button>
+                    <button
+                        class="flex items-center justify-center gap-2 py-2.5 px-4 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-sm font-bold text-slate-700 dark:text-slate-300"
+                        type="button">
+                        <span class="material-symbols-outlined text-xl text-primary">smartphone</span>
+                        OTP
+                    </button>
+                </div>
+            </form>
+            <!-- Card Footer -->
+            <div
+                class="bg-slate-50 dark:bg-slate-800/50 py-6 px-10 text-center border-t border-slate-100 dark:border-slate-800">
+                <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">
+                    New to Indore Sweet Shoppe?
+                    <a class="text-primary font-bold hover:underline ml-1" href="#">Create an Account</a>
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- Footer Information -->
+    <footer class="py-8 px-6 text-center">
+        <p class="text-slate-400 text-xs font-medium max-w-lg mx-auto leading-relaxed">
+            By logging in, you agree to our <a class="underline hover:text-primary" href="#">Terms of Service</a> and <a
+                class="underline hover:text-primary" href="#">Privacy Policy</a>. Indore Sweet Shoppe uses secure
+            256-bit encryption for all transactions.
+        </p>
+    </footer>
+</body>
+
+</html>
+
+<!-- Secure Checkout Page -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Indore Sweet Shoppe - Brand Design System</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee9d2b",
+                        "gold-accent": "#d4af37",
+                        "cream-bg": "#fdf5e6",
+                        "charcoal-text": "#333333",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .font-serif-heading {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <!-- Top Navigation Bar Component -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <div class="flex items-center gap-3">
+                    <div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">bakery_dining</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serif-heading text-xl font-bold leading-none tracking-tight">Indore Sweet Shoppe
+                        </h1>
+                        <p class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Design System v1.0</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-semibold border-b-2 border-primary pb-1" href="#">Foundations</a>
+                    <a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+                        href="#">Components</a>
+                    <a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+                        href="#">Guidelines</a>
+                    <a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+                        href="#">Resources</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="relative hidden lg:block">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                    <input
+                        class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary"
+                        placeholder="Search tokens..." type="text" />
+                </div>
+                <button
+                    class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                    Download Assets
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="mb-20">
+            <h1 class="font-serif-heading text-6xl font-black text-slate-900 dark:text-slate-50 mb-6">Visual Identity
+                &amp; Component Library</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+                A unified framework for creating premium digital confectionery experiences. Combining traditional Indori
+                heritage with modern minimalist design patterns.
+            </p>
+        </section>
+        <!-- Foundations: Colors & Typography -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+            <!-- Color Palette -->
+            <section>
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary">palette</span>
+                    <h2 class="text-2xl font-bold">Color Tokens</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div
+                        class="group p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-hover hover:shadow-md">
+                        <div class="h-24 w-full bg-primary rounded-lg mb-4"></div>
+                        <p class="font-bold text-sm">Saffron (Primary)</p>
+                        <p class="text-xs text-slate-500 font-mono">#EE9D2B</p>
+                        <p class="text-xs mt-2 text-slate-400 italic">Action buttons &amp; Brand identity</p>
+                    </div>
+                    <div
+                        class="group p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-hover hover:shadow-md">
+                        <div class="h-24 w-full bg-[#d4af37] rounded-lg mb-4"></div>
+                        <p class="font-bold text-sm">Gold (Accent)</p>
+                        <p class="text-xs text-slate-500 font-mono">#D4AF37</p>
+                        <p class="text-xs mt-2 text-slate-400 italic">Premium labels &amp; Icons</p>
+                    </div>
+                    <div
+                        class="group p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-hover hover:shadow-md">
+                        <div class="h-24 w-full bg-[#fdf5e6] rounded-lg mb-4 border border-slate-100"></div>
+                        <p class="font-bold text-sm">Cream (Background)</p>
+                        <p class="text-xs text-slate-500 font-mono">#FDF5E6</p>
+                        <p class="text-xs mt-2 text-slate-400 italic">Warm canvas for content</p>
+                    </div>
+                    <div
+                        class="group p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-hover hover:shadow-md">
+                        <div class="h-24 w-full bg-[#333333] rounded-lg mb-4"></div>
+                        <p class="font-bold text-sm">Charcoal (Text)</p>
+                        <p class="text-xs text-slate-500 font-mono">#333333</p>
+                        <p class="text-xs mt-2 text-slate-400 italic">Primary typography &amp; Borders</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Typography Scale -->
+            <section>
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary">text_fields</span>
+                    <h2 class="text-2xl font-bold">Typography Scale</h2>
+                </div>
+                <div
+                    class="space-y-8 bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Display Serif / H1</p>
+                        <h1 class="font-serif-heading text-5xl font-black">Modern Indian Luxury</h1>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Display Serif / H2</p>
+                        <h2 class="font-serif-heading text-3xl font-bold">Authentic Flavors of Indore</h2>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Sans Serif / Body Large</p>
+                        <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+                            Our heritage dates back decades, bringing you the finest selection of sweets crafted with
+                            passion.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Sans Serif / UI Bold</p>
+                        <p class="text-sm font-bold uppercase tracking-wider text-primary">ADD TO SHOPPING CART — ₹450
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Component Gallery -->
+        <section class="mb-24">
+            <div class="flex items-center justify-between mb-12">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary">grid_view</span>
+                    <h2 class="text-2xl font-bold">Interactive Components</h2>
+                </div>
+                <span class="h-px bg-slate-200 dark:bg-slate-800 flex-1 mx-8 hidden md:block"></span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Buttons & Inputs -->
+                <div class="space-y-10">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Button Variations
+                        </h3>
+                        <div class="flex flex-col gap-4">
+                            <button
+                                class="w-full bg-primary text-white h-12 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-md active:scale-95">
+                                <span class="material-symbols-outlined">shopping_basket</span>
+                                Primary Action
+                            </button>
+                            <button
+                                class="w-full border-2 border-primary text-primary h-12 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-primary/5 transition-all active:scale-95">
+                                Secondary Outline
+                            </button>
+                            <button
+                                class="w-full text-slate-500 font-bold h-10 flex items-center justify-center gap-2 hover:text-primary transition-colors disabled:opacity-50"
+                                disabled="">
+                                Disabled State
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Form Inputs</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-bold text-slate-600 dark:text-slate-400">Full Name</label>
+                                <input
+                                    class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                    type="text" value="Rahul Sharma" />
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-bold text-slate-600 dark:text-slate-400">Select
+                                    Category</label>
+                                <select
+                                    class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none">
+                                    <option>Namkeen &amp; Savories</option>
+                                    <option>Traditional Sweets</option>
+                                    <option>Gift Boxes</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card Showcase -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Molecules: Product Card
+                        &amp; Modal</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Product Card -->
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden group shadow-sm hover:shadow-xl transition-all">
+                            <div class="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
+                                    data-alt="Close up of traditional Indori namkeen snacks"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_OvY6KdjxCzkXmhWWE6Dj-opCyEftB2kIoIm9idaHf9b91-IDE_UlQfRWZ4QMGUDrtz1fX5kr_dsgHdHOUIO8ahuFaSioc6OL4UOywepESI9ndkP__ehS1F1UCv6Xm85GGFtD4D38fb8SYAZVLrS09J8vKUkGWHias0Nz_fsrRzPCaWpSgNJDt-Ki3zeSO6KufdhDP4EzeDQJPGUAkPFINUM3qEFdnu9IYJHvb2Cq8lUKWPKEVbq9smok09ooqMqMuqzZqkpJeQ')">
+                                </div>
+                                <div class="absolute top-4 left-4">
+                                    <span
+                                        class="bg-primary text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider">Bestseller</span>
+                                </div>
+                                <button
+                                    class="absolute top-4 right-4 size-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-900 hover:text-red-500 transition-colors">
+                                    <span class="material-symbols-outlined text-lg">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-serif-heading text-xl font-bold">Special Indori Namkeen</h4>
+                                    <span class="font-bold text-primary">₹450</span>
+                                </div>
+                                <p class="text-sm text-slate-500 mb-6 line-clamp-2">Authentic spicy chickpea flour
+                                    snacks made with traditional Indore spices and pure peanut oil.</p>
+                                <button
+                                    class="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white h-11 rounded-lg font-bold transition-all flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                    Quick Add
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Mini Modal Preview -->
+                        <div
+                            class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center relative min-h-[400px]">
+                            <div
+                                class="bg-white dark:bg-slate-900 w-full rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h5 class="font-bold">Order Customization</h5>
+                                    <span class="material-symbols-outlined text-slate-400 cursor-pointer">close</span>
+                                </div>
+                                <div class="space-y-4 mb-6">
+                                    <div
+                                        class="p-3 bg-primary/5 border border-primary/20 rounded-lg flex items-center gap-3">
+                                        <span
+                                            class="material-symbols-outlined text-primary">featured_seasonal_and_gifts</span>
+                                        <p class="text-xs font-medium">Add festive gift wrapping (+₹50)</p>
+                                        <input checked=""
+                                            class="ml-auto rounded text-primary focus:ring-primary border-slate-300"
+                                            type="checkbox" />
+                                    </div>
+                                    <div
+                                        class="p-3 border border-slate-200 dark:border-slate-800 rounded-lg flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-slate-400">no_food</span>
+                                        <p class="text-xs font-medium">Sugar-free alternative</p>
+                                        <input class="ml-auto rounded text-primary focus:ring-primary border-slate-300"
+                                            type="checkbox" />
+                                    </div>
+                                </div>
+                                <button class="w-full bg-primary text-white py-3 rounded-lg font-bold text-sm">Save
+                                    Preferences</button>
+                            </div>
+                            <p class="absolute bottom-4 text-[10px] text-slate-400 uppercase font-bold tracking-widest">
+                                Modal Component Overlay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Iconography & Small Details -->
+        <section class="border-t border-slate-200 dark:border-slate-800 pt-20">
+            <div class="flex items-center gap-3 mb-12">
+                <span class="material-symbols-outlined text-primary">token</span>
+                <h2 class="text-2xl font-bold">Brand Icons &amp; Assets</h2>
+            </div>
+            <div class="flex flex-wrap gap-12 justify-between">
+                <div class="flex gap-8 text-slate-600 dark:text-slate-400">
+                    <div class="flex flex-col items-center gap-2">
+                        <div
+                            class="size-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <span class="text-[10px] font-bold">Rating</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div
+                            class="size-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined">local_shipping</span>
+                        </div>
+                        <span class="text-[10px] font-bold">Delivery</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div
+                            class="size-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined">person</span>
+                        </div>
+                        <span class="text-[10px] font-bold">Account</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div
+                            class="size-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <span class="text-[10px] font-bold" data-location="Indore">Locate</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div
+                            class="size-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <span class="text-[10px] font-bold">Payment</span>
+                    </div>
+                </div>
+                <div class="bg-primary/5 p-6 rounded-2xl border border-primary/20 max-w-sm">
+                    <h4 class="font-bold text-sm mb-2 text-primary">Accessibility Note</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        All saffron (#EE9D2B) action elements must maintain a contrast ratio of 4.5:1 against the cream
+                        background. Use charcoal text for overlays on gold components.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3 grayscale opacity-50">
+                <div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined text-sm">bakery_dining</span>
+                </div>
+                <span class="font-serif-heading font-bold">Indore Sweet Shoppe</span>
+            </div>
+            <p class="text-sm text-slate-500">© 2024 Design System. All internal brand assets are protected.</p>
+            <div class="flex gap-6">
+                <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                        class="material-symbols-outlined">language</span></a>
+                <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                        class="material-symbols-outlined">share</span></a>
+                <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                        class="material-symbols-outlined">help_outline</span></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

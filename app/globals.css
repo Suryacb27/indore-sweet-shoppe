@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFDF9;
+  --foreground: #171717;
+  --primary: #ec7f13;
+  /* Updated to Stitch vibrant orange */
+  --secondary: #FFFDF9;
+  /* Cream */
+  --accent: #d4af37;
+  /* Gold filigree accent */
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --color-primary: #ee9d2b;
+  --color-bg-light: #fcfaf8;
+  --color-bg-dark: #221a10;
+  --accent: #d4af37;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-light dark:bg-bg-dark text-slate-900 dark:text-slate-100 antialiased font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-black tracking-tight;
+  }
+}
+
+@layer components {
+  .admin-sidebar-pattern {
+    background-image: url('https://www.transparenttextures.com/patterns/mandala.png');
+    background-repeat: repeat;
+  }
+
+  .gold-filigree-border {
+    position: relative;
+    border-image: linear-gradient(to bottom, #d4af37, #f3e5ab, #d4af37) 1;
+  }
+
+  .premium-card {
+    @apply bg-white rounded-[2rem] border border-orange-50/50 shadow-2xl shadow-orange-100/20 backdrop-blur-sm;
+  }
+
+  .premium-button {
+    @apply bg-orange-600 text-white rounded-2xl font-black px-8 py-4 hover:bg-orange-700 transition-all shadow-xl shadow-orange-100/50 hover:-translate-y-1 active:scale-95;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Custom Scrollbar for Indian Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ec7f13;
+  border-radius: 10px;
+}
