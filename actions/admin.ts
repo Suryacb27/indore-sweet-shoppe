@@ -97,6 +97,29 @@ export async function createCategory(formData: FormData) {
     revalidatePath("/")
 }
 
+export async function deleteCategory(id: string) {
+    const supabase = await checkAdmin()
+    if (!supabase) throw new Error("Unauthorized")
+
+    const { error } = await supabase.from("categories").delete().eq("id", id)
+    if (error) throw new Error(error.message)
+    revalidatePath("/admin/categories")
+    revalidatePath("/")
+}
+
+export async function updateCategory(id: string, formData: FormData) {
+    const supabase = await checkAdmin()
+    if (!supabase) throw new Error("Unauthorized")
+
+    const name = formData.get("name") as string
+    const description = formData.get("description") as string
+
+    const { error } = await supabase.from("categories").update({ name, description }).eq("id", id)
+    if (error) throw new Error(error.message)
+    revalidatePath("/admin/categories")
+    revalidatePath("/")
+}
+
 // Order Actions
 export async function updateOrderStatus(orderId: string, status: string) {
     const supabase = await checkAdmin()
@@ -104,7 +127,7 @@ export async function updateOrderStatus(orderId: string, status: string) {
 
     const { error } = await supabase
         .from("orders")
-        .update({ status })
+        .update({ order_status: status }) // fixed field name from status to order_status
         .eq("id", orderId)
 
     if (error) throw new Error(error.message)

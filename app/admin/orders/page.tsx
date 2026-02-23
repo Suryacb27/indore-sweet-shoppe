@@ -8,7 +8,7 @@ export default async function OrdersAdmin() {
 
     const { data: orders } = await supabase
         .from("orders")
-        .select("*, profiles(name, email)")
+        .select("*, profiles(name, email, phone, role)") // adding phone for shipping visibility
         .order("created_at", { ascending: false })
 
     return (
@@ -31,6 +31,7 @@ export default async function OrdersAdmin() {
                         <tr>
                             <th className="px-8 py-6">Order Info</th>
                             <th className="px-8 py-6">Customer</th>
+                            <th className="px-8 py-6">Shipping Details</th>
                             <th className="px-8 py-6">Amount</th>
                             <th className="px-8 py-6">Current Status</th>
                             <th className="px-8 py-6 text-right">Update Progression</th>
@@ -51,6 +52,20 @@ export default async function OrdersAdmin() {
                                     <div className="flex flex-col">
                                         <span className="font-black text-gray-900 leading-tight">{order.profiles?.name || 'Guest'}</span>
                                         <span className="text-[10px] font-bold text-gray-400 truncate max-w-[150px]">{order.profiles?.email}</span>
+                                    </div>
+                                </td>
+                                <td className="px-8 py-8">
+                                    <div className="flex flex-col gap-1">
+                                        <div className="flex items-center gap-2 text-[10px] font-black text-gray-400">
+                                            <Sparkles className="w-3 h-3 text-orange-400" /> Default Address
+                                        </div>
+                                        <span className="text-xs font-bold text-gray-600 line-clamp-2">
+                                            {/* @ts-ignore */}
+                                            {order.profiles?.address || "Address not provided"}
+                                        </span>
+                                        <span className="text-[10px] font-black text-orange-600 tracking-widest">
+                                            {order.profiles?.phone || "No phone"}
+                                        </span>
                                     </div>
                                 </td>
                                 <td className="px-8 py-8 font-black text-gray-900 italic font-serif text-lg">

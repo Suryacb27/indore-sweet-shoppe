@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FestiveGifting() {
     return (
         <section className="py-24 max-w-7xl mx-auto px-6">
@@ -20,12 +22,12 @@ export default function FestiveGifting() {
                             Share the sweetness of tradition with our hand-packed, luxury gift hampers. Perfectly curated for Diwali, weddings, and corporate occasions.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <button className="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-50 transition-colors">
+                            <Link href="/gifts" className="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-xl shadow-black/10 text-center">
                                 Customize Your Box
-                            </button>
-                            <button className="bg-black/20 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-black/30 transition-colors">
-                                Download Catalog
-                            </button>
+                            </Link>
+                            <Link href="/gifts" className="bg-black/20 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-xl font-bold text-lg hover:bg-black/30 transition-all text-center">
+                                View Gift Catalog
+                            </Link>
                         </div>
                     </div>
                     <div className="flex-1">

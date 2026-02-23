@@ -1,4 +1,5 @@
 import { ShoppingCart, Star, Heart } from "lucide-react";
+import AddToCartButton from "./AddToCartButton";
 
 interface ProductCardProps {
     id?: string;
@@ -9,10 +10,10 @@ interface ProductCardProps {
     rating?: number;
     reviewCount?: number;
     weight?: string;
-    onAddToCart?: () => void;
 }
 
 export default function ProductCard({
+    id,
     name,
     description,
     price,
@@ -20,7 +21,6 @@ export default function ProductCard({
     rating = 5,
     reviewCount = 0,
     weight = "500g",
-    onAddToCart
 }: ProductCardProps) {
     return (
         <div className="bg-bg-light dark:bg-bg-dark rounded-xl overflow-hidden border border-primary/10 hover:shadow-2xl hover:shadow-primary/5 transition-all group">
@@ -51,12 +51,7 @@ export default function ProductCard({
                     <span className="text-primary font-black text-xl">
                         ₹{price.toFixed(2)} <span className="text-xs text-slate-400 font-normal">/ {weight}</span>
                     </span>
-                    <button
-                        onClick={onAddToCart}
-                        className="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded-lg transition-colors"
-                    >
-                        <span className="material-symbols-outlined">add_shopping_cart</span>
-                    </button>
+                    <AddToCartButton productId={id!} />
                 </div>
             </div>
         </div>

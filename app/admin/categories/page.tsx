@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/server"
-import { createCategory } from "@/actions/admin"
+import { createCategory, deleteCategory, updateCategory } from "@/actions/admin"
 import { Category } from "@/lib/types"
 import { Layers, Plus, Sparkles, Pencil, Trash2 } from "lucide-react"
 
@@ -82,9 +82,11 @@ export default async function CategoriesAdmin() {
                                                 <button className="p-2 text-gray-300 hover:text-orange-600 transition-colors">
                                                     <Pencil className="w-4 h-4" />
                                                 </button>
-                                                <button className="p-2 text-gray-300 hover:text-red-500 transition-colors">
-                                                    <Trash2 className="w-4 h-4" />
-                                                </button>
+                                                <form action={async () => { "use server"; await deleteCategory(category.id) }}>
+                                                    <button className="p-2 text-gray-300 hover:text-red-500 transition-colors">
+                                                        <Trash2 className="w-4 h-4" />
+                                                    </button>
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>

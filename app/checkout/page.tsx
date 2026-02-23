@@ -68,15 +68,15 @@ export default async function CheckoutPage() {
                         <div className="grid grid-cols-1 gap-6">
                             <div className="space-y-2">
                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Full Name</label>
-                                <input type="text" placeholder="e.g. Rahul Sharma" className="w-full p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 transition-all" required />
+                                <input type="text" name="name" placeholder="e.g. Rahul Sharma" className="w-full p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 transition-all" required />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number</label>
-                                <input type="text" placeholder="+91 XXXXX XXXXX" className="w-full p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 transition-all" required />
+                                <input type="text" name="phone" placeholder="+91 XXXXX XXXXX" className="w-full p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 transition-all" required />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Delivery Address</label>
-                                <textarea placeholder="House No, Street, Landmark..." className="w-full p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 transition-all h-32 resize-none" required></textarea>
+                                <textarea name="address" placeholder="House No, Street, Landmark..." className="w-full p-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 transition-all h-32 resize-none" required></textarea>
                             </div>
                         </div>
                     </section>
