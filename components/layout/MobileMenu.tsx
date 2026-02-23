@@ -7,9 +7,10 @@ import { X, Menu, Search, ShoppingBag, User, ChevronRight } from "lucide-react";
 interface MobileMenuProps {
     cartCount: number;
     user: any;
+    role?: string;
 }
 
-export default function MobileMenu({ cartCount, user }: MobileMenuProps) {
+export default function MobileMenu({ cartCount, user, role = "customer" }: MobileMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     // Prevent scroll when menu is open
@@ -95,18 +96,37 @@ export default function MobileMenu({ cartCount, user }: MobileMenuProps) {
                     {/* User & Actions */}
                     <div className="p-6 border-t border-primary/10 space-y-4 bg-primary/5 dark:bg-primary/10">
                         <Link
-                            href={user ? "/profile" : "/login"}
+                            href={user ? (role === "admin" ? "/admin" : "/profile") : "/login"}
                             onClick={() => setIsOpen(false)}
                             className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-primary/10"
                         >
                             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                                <User className="w-5 h-5" />
+                                {role === "admin" ? (
+                                    <span className="material-symbols-outlined">dashboard</span>
+                                ) : (
+                                    <User className="w-5 h-5" />
+                                )}
                             </div>
                             <div>
-                                <p className="text-sm font-black text-slate-900 dark:text-slate-100">{user ? 'My Profile' : 'Login / Signup'}</p>
-                                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">{user ? 'Account Settings' : 'Indulge in tradition'}</p>
+                                <p className="text-sm font-black text-slate-900 dark:text-slate-100">
+                                    {user ? (role === "admin" ? 'Admin Dashboard' : 'My Profile') : 'Login or Sign Up'}
+                                </p>
+                                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
+                                    {user ? (role === "admin" ? 'Manage System' : 'Account Settings') : 'Join the tradition'}
+                                </p>
                             </div>
                         </Link>
+
+                        {user && (
+                            <form action="/api/auth/signout" method="POST">
+                                <button
+                                    type="submit"
+                                    className="w-full flex items-center justify-center gap-2 p-4 rounded-xl border border-red-100 text-red-500 font-black text-[10px] uppercase tracking-widest hover:bg-red-50 transition-colors"
+                                >
+                                    <span className="material-symbols-outlined text-sm">logout</span> Sign Out
+                                </button>
+                            </form>
+                        )}
 
                         <Link
                             href="/cart"

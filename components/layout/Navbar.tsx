@@ -7,12 +7,21 @@ export default async function Navbar() {
     const { data: { user } } = await supabase.auth.getUser();
 
     let cartCount = 0;
+    let role = "customer";
     if (user) {
-        const { count } = await supabase
-            .from("cart_items")
-            .select("*", { count: "exact", head: true })
-            .eq("user_id", user.id);
+        const [{ count }, { data: profile }] = await Promise.all([
+            supabase
+                .from("cart_items")
+                .select("*", { count: "exact", head: true })
+                .eq("user_id", user.id),
+            supabase
+                .from("profiles")
+                .select("role")
+                .eq("id", user.id)
+                .single()
+        ]);
         cartCount = count || 0;
+        role = profile?.role || "customer";
     }
 
     return (
@@ -49,9 +58,30 @@ export default async function Navbar() {
                         />
                     </div>
                     <div className="flex items-center gap-1 md:gap-4">
-                        <Link href={user ? "/profile" : "/login"} className="hidden sm:flex p-2 hover:bg-primary/10 rounded-full transition-colors relative text-slate-700 dark:text-slate-300">
-                            <span className="material-symbols-outlined">person</span>
-                        </Link>
+                        {user ? (
+                            <>
+                                {role === "admin" ? (
+                                    <Link href="/admin" className="hidden sm:flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-orange-700 transition-colors">
+                                        <span className="material-symbols-outlined text-sm">dashboard</span> Admin
+                                    </Link>
+                                ) : (
+                                    <Link href="/profile" className="hidden sm:flex p-2 hover:bg-primary/10 rounded-full transition-colors relative text-slate-700 dark:text-slate-300">
+                                        <span className="material-symbols-outlined">person</span>
+                                    </Link>
+                                )}
+                                <form action="/api/auth/signout" method="POST" className="hidden sm:block">
+                                    <button className="p-2 hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-full transition-colors">
+                                        <span className="material-symbols-outlined">logout</span>
+                                    </button>
+                                </form>
+                            </>
+                        ) : (
+                            <div className="hidden sm:flex items-center gap-2">
+                                <Link href="/login" className="text-[10px] font-black text-slate-400 hover:text-primary uppercase tracking-widest px-4 py-2">Login</Link>
+                                <Link href="/signup" className="text-[10px] font-black bg-primary text-white uppercase tracking-widest px-4 py-2 rounded-full hover:shadow-lg hover:shadow-primary/20 transition-all">Sign Up</Link>
+                            </div>
+                        )}
+
                         <Link href="/cart" className="p-2 hover:bg-primary/10 rounded-full transition-colors relative text-slate-700 dark:text-slate-300">
                             <span className="material-symbols-outlined">shopping_bag</span>
                             {cartCount > 0 && (
@@ -62,7 +92,7 @@ export default async function Navbar() {
                         </Link>
 
                         {/* Mobile Menu Toggle */}
-                        <MobileMenu cartCount={cartCount} user={user} />
+                        <MobileMenu cartCount={cartCount} user={user} role={role} />
                     </div>
                 </div>
             </div>
