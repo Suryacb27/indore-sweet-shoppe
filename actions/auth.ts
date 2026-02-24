@@ -130,7 +130,7 @@ export async function adminLogin(formData: FormData) {
     const password = formData.get("password") as string
 
     // 1. Sign in
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
 
     if (error) {
         const msg = error.message.toLowerCase()
@@ -140,30 +140,7 @@ export async function adminLogin(formData: FormData) {
         return { error: error.message }
     }
 
-    // 2. Validate role — sign out immediately and reject if not admin
-    // We query with the current supabase instance which should have the session cached
-    let { data: profile, error: roleError } = await supabase
-        .from("profiles")
-        .select("role")
-        .eq("id", data.user.id)
-        .maybeSingle()
-
-    // Fallback: If profile is missing but no error occurred, it might be an RLS delay
-    // in the current client instance. We try one more time to be sure.
-    if (!profile && !roleError) {
-        const { data: retryProfile } = await supabase
-            .from("profiles")
-            .select("role")
-            .eq("id", data.user.id)
-            .maybeSingle()
-        profile = retryProfile
-    }
-
-    if (profile?.role !== "admin") {
-        await supabase.auth.signOut()
-        return { error: "Access denied. Admin credentials required." }
-    }
-
-    // 3. Role confirmed — redirect to admin dashboard
+    // 2. Redirect to admin dashboard
+    // Middleware and Layout will handle role validation on the fresh request
     redirect("/admin")
 }
