@@ -80,14 +80,6 @@ export default async function Navbar() {
                                     )}
                                 </Link>
 
-                                <Link
-                                    href="/account"
-                                    className="p-3.5 text-gray-600 hover:text-orange-600 bg-white border border-orange-50 rounded-2xl shadow-sm transition-all hover:-translate-y-1 active:scale-95 group"
-                                    title="My Account"
-                                >
-                                    <User className="w-5 h-5 transition-transform group-hover:scale-110" />
-                                </Link>
-
                                 <div className="h-8 w-px bg-orange-100/50" />
 
                                 <form action="/api/auth/signout" method="POST">
@@ -101,20 +93,12 @@ export default async function Navbar() {
                                 </form>
                             </div>
                         ) : (
-                            <div className="flex items-center gap-4">
-                                <Link
-                                    href="/login"
-                                    className="text-xs font-black uppercase tracking-widest text-gray-600 hover:text-orange-600 transition-colors"
-                                >
-                                    Login
-                                </Link>
-                                <Link
-                                    href="/signup"
-                                    className="px-8 py-3.5 bg-gray-900 text-white rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-orange-600 transition-all shadow-xl shadow-orange-100/20 hover:-translate-y-1 active:scale-95"
-                                >
-                                    Sign Up
-                                </Link>
-                            </div>
+                            <Link
+                                href="/login"
+                                className="px-10 py-3.5 bg-gray-900 text-white rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-orange-600 transition-all shadow-xl shadow-orange-100/20 hover:-translate-y-1 active:scale-95"
+                            >
+                                Sign In
+                            </Link>
                         )}
                     </div>
 
