@@ -141,11 +141,23 @@ export async function adminLogin(formData: FormData) {
     }
 
     // 2. Validate role — sign out immediately and reject if not admin
-    const { data: profile } = await supabase
+    // We query with the current supabase instance which should have the session cached
+    let { data: profile, error: roleError } = await supabase
         .from("profiles")
         .select("role")
         .eq("id", data.user.id)
         .maybeSingle()
+
+    // Fallback: If profile is missing but no error occurred, it might be an RLS delay
+    // in the current client instance. We try one more time to be sure.
+    if (!profile && !roleError) {
+        const { data: retryProfile } = await supabase
+            .from("profiles")
+            .select("role")
+            .eq("id", data.user.id)
+            .maybeSingle()
+        profile = retryProfile
+    }
 
     if (profile?.role !== "admin") {
         await supabase.auth.signOut()

@@ -17,11 +17,12 @@
 
 ## Last Session Summary
 
-Hardened admin auth system focused on server action robustness and route security (`ba45f12`):
+Hardened admin auth system focused on server action robustness, route security, and session reliability (`907a782`):
 
 - `adminBootstrap()` → returns `{ error }` instead of throwing; redirects to `/admin/login?created=1`
 - `/admin-setup` → converted to Client Component (for error state) with async `searchParams` fix for Next.js 16
 - **Redirect Loop Fix**: Moved admin dashboard routes into `app/admin/(dashboard)` group to exclude `/admin/login` from the authentication-enforcing layout.
+- **Login Session Hydration Fix**: Hardened `adminLogin()` to handle potential RLS lookup failures caused by session hydration delay in server actions.
 - Storage approach verified: `profiles.role` used consistently across all server-side gates.
 - Verified production readiness with `npm run build` (clean cache).
 
