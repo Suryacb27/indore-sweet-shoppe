@@ -41,7 +41,7 @@ export const updateSession = async (request: NextRequest) => {
         // https://supabase.com/docs/guides/auth/server-side/nextjs
         const { data: { user } } = await supabase.auth.getUser()
 
-        // Protect /admin routes (but not /admin/login itself)
+        // 1. Protect /admin routes (but not /admin/login itself)
         if (
             request.nextUrl.pathname.startsWith('/admin') &&
             !request.nextUrl.pathname.startsWith('/admin/login')
@@ -59,6 +59,16 @@ export const updateSession = async (request: NextRequest) => {
 
             if (profile?.role !== 'admin') {
                 return NextResponse.redirect(new URL('/', request.url))
+            }
+        }
+
+        // 2. Protect customer routes
+        if (
+            request.nextUrl.pathname.startsWith('/profile') ||
+            request.nextUrl.pathname.startsWith('/checkout')
+        ) {
+            if (!user) {
+                return NextResponse.redirect(new URL('/login', request.url))
             }
         }
 

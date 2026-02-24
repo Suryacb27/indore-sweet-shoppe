@@ -4,46 +4,32 @@
 
 ## Project
 
-**Indore Sweet Shoppe** — Next.js 16 / Supabase e-commerce for premium Indian sweets.
+**Indore Sweet Shoppe** — Fully functional Next.js 16 / Supabase ecommerce platform.
 
 ## Current Milestone
 
-**Auth Stabilization and Role Separation**
+**System Stabilization & Completion**
 
 ## Current Position
 
-- **Phase 1**: ✅ Complete — Server Action Hardening
-- **Phase 2**: ✅ Complete — End-to-End Verification & Security Hardening
+- **Phase 1**: ⬜ Not Started — Full Audit
+- **Phase 2**: ⬜ Not Started — Auth Stabilization
+- **Phase 3**: ⬜ Not Started — Dashboard Separation
+- **Phase 4**: ⬜ Not Started — Functional Completion
+- **Phase 5**: ⬜ Not Started — Demo Data Seeding
+- **Phase 6**: ⬜ Not Started — Final Verification
 
 ## Last Session Summary
 
-Hardened and architecturally stabilized the admin auth system (`313c77a`):
-
-- `adminBootstrap()` → returns `{ error }` instead of throwing; redirects to `/admin/login?created=1`
-- `/admin-setup` → converted to Client Component (for error state) with async `searchParams` fix for Next.js 16
-- **Redirect Loop Fix**: Moved admin dashboard routes into `app/admin/(dashboard)` group to exclude `/admin/login` from the authentication-enforcing layout.
-- **Architectural Refactor**: Simplified `adminLogin()` to handle only sign-in/redirect. Centralized role validation in **Middleware** and **Layouts** to resolve hydration race conditions natively.
-- Storage approach verified: `profiles.role` used consistently across all server-side gates.
-- Verified production readiness with `npm run build` (clean cache).
-
-- `actions/auth.ts` → `login()` returns `{ error }` instead of throwing; added `adminLogin()` with role guard + non-admin signout
-- `Navbar.tsx` + `MobileMenu.tsx` → logout uses `form action={logout}` server action
-- `app/api/auth/signout/route.ts` → **deleted** (replaced by server action)
-- `app/admin-setup/page.tsx` → guarded by `AUTH_MODE=test` env flag
-- `.env.local` → `AUTH_MODE=test` added
-- `lib/supabase/middleware.ts` → redirects `/admin/*` to `/admin/login`; excludes `/admin/login` from guard
-- `app/admin/layout.tsx` → redirects unauthenticated to `/admin/login`
-- `app/admin/login/page.tsx` → **new** dedicated admin login page with dark UI
-- `components/auth/AuthLayout.tsx` → Admin Access link fixed to `/admin/login`
+Concluded the "Admin Auth Implementation" milestone with hardened server actions and route grouping. Now triggered a full system reset to ensure end-to-end functionality, consistent patterns, and zero technical debt.
 
 ## Next Steps
 
-Phase 3 — run manual verification tests against all 9 SPEC acceptance criteria.
+1. Begin Phase 1: Full Audit (map routes, identify broken links/buttons).
 
 ## Known Gaps / Decisions Pending
 
-- No payment gateway integrated (COD assumed)
-- No image upload / Supabase Storage configured
-- Product ratings are placeholder values
-- Search bar is decorative
-- Delivery fee hardcoded in `actions/orders.ts`
+- Standardize all mutations to Server Actions.
+- Implement Route Groups for (public), (auth), and admin/(dashboard).
+- Complete the Cart/Checkout/Order History loop.
+- Seed meaningful demo data (10+ items).

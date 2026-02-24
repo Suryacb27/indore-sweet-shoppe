@@ -1,21 +1,17 @@
 import { createClient } from "@/lib/supabase/server"
 import { createOrder } from "@/actions/orders"
 import Link from "next/link"
+import { redirect } from "next/navigation"
 import { CreditCard, Truck, ShieldCheck, ArrowRight, ShoppingBag, Package, Sparkles } from "lucide-react"
 
 export default async function CheckoutPage() {
     const supabase = await createClient()
     const { data: { user } } = await supabase.auth.getUser()
 
+    // Auth is handled by Middleware, so we can assume user exists if we reached here
+    // However, we still fetch the user to get their cart data
     if (!user) {
-        return (
-            <div className="max-w-7xl mx-auto px-4 py-24 text-center">
-                <ShoppingBag className="w-24 h-24 text-primary/20 mx-auto mb-8" />
-                <h1 className="text-4xl font-black text-slate-900 dark:text-slate-100 mb-4 tracking-tighter">Namaste!</h1>
-                <p className="text-slate-500 font-medium mb-8">Please login to complete your purchase of Indore's finest sweets.</p>
-                <Link href="/login" className="bg-primary text-white px-8 py-3 rounded-xl font-bold">Login to Continue</Link>
-            </div>
-        )
+        redirect("/login")
     }
 
     const { data: cartItems } = await supabase

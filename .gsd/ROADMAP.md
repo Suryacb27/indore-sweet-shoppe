@@ -1,27 +1,38 @@
 # ROADMAP.md
 
-> **Current Milestone**: Admin Auth Implementation
-> **Goal**: Harden the existing auth system by fixing identified gaps — error handling, deprecated API usage, and redirect correctness
-
----
+> **Current Milestone**: System Stabilization & Completion
+> **Goal**: Achieve a fully functional, production-ready ecommerce platform with standardized auth and architectural integrity.
 
 ## Must-Haves
-
-- [ ] `adminBootstrap()` returns `{ error }` (no uncaught throws)
-- [ ] `/admin-setup` displays inline errors
-- [ ] `adminBootstrap()` redirects to `/admin/login?created=1`
-- [ ] `searchParams` updated to Next.js 16 async pattern
-- [ ] All 9 acceptance criteria pass
-- [ ] TypeScript: 0 errors
-
----
+- [ ] Centralized Middleware auth/role validation
+- [ ] Standardized Server Actions for all mutations
+- [ ] Route Groups for logical separation and security
+- [ ] Functional Cart and Checkout (mock)
+- [ ] Seeding script for demo products/orders
+- [ ] Clean production build
 
 ## Phases
 
-### Phase 1: Server Action Hardening
-**Status**: ✅ Complete
-**Objective**: Fix `adminBootstrap()` to return `{ error }`, update `/admin-setup` for inline error display, fix redirect to `/admin/login?created=1`, and update `searchParams` to async pattern.
+### Phase 1: Full Audit
+**Status**: ⬜ Not Started
+**Objective**: Identify all broken links, dead buttons, and auth inconsistencies. Map full route structure.
 
-### Phase 2: End-to-End Verification
-**Status**: ✅ Complete
-**Objective**: Run all 9 acceptance criteria manually, run TypeScript compile, capture proof, update STATE.md. Includes fixing the redirect loop via route grouping.
+### Phase 2: Auth Stabilization
+**Status**: ⬜ Not Started
+**Objective**: Standardize signup/login/logout patterns. Fix RLS policies and middleware enforcement.
+
+### Phase 3: Dashboard Separation
+**Status**: ⬜ Not Started
+**Objective**: Implement `(public)`, `(auth)`, and `admin/(dashboard)` route groups. Secure all layouts.
+
+### Phase 4: Functional Completion
+**Status**: ⬜ Not Started
+**Objective**: Connect all UI components to functional server actions. Implement cart persistence and order flow.
+
+### Phase 5: Demo Data Seeding
+**Status**: ⬜ Not Started
+**Objective**: Create a robust seeding script/action to populate products, users, and orders.
+
+### Phase 6: Final Verification
+**Status**: ⬜ Not Started
+**Objective**: Comprehensive testing against all 10 project expectations. Final production build verification.
