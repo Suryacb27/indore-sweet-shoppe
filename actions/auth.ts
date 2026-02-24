@@ -39,7 +39,7 @@ export async function signup(formData: FormData) {
     })
 
     if (error) {
-        throw new Error(error.message)
+        return { error: error.message }
     }
 
     if (data.user) {
@@ -53,15 +53,10 @@ export async function signup(formData: FormData) {
 
         if (profileError) {
             console.error("Profile creation error:", profileError)
-            // Even if profile fails, we don't want to break the whole flow if auth succeeded
-            // but we should probably inform the user or handled it.
-            // For now, let's keep it simple as per request.
+            return { error: "User created but profile setup failed. Please contact support." }
         }
     }
 
-    // Redirect to home or a success page. User asked for redirect to homepage after success.
-    // However, Supabase usually requires email verification unless disabled.
-    // If successful, redirect to home.
     redirect("/")
 }
 

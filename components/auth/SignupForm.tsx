@@ -11,11 +11,19 @@ export default function SignupForm() {
     const handleSubmit = async (formData: FormData) => {
         setError(null)
         try {
-            await signup(formData)
-        } catch (err: any) {
-            if (err.message && !err.message.includes("NEXT_REDIRECT")) {
-                setError(err.message)
+            const result = await signup(formData)
+            if (result?.error) {
+                setError(result.error)
             }
+        } catch (err: any) {
+            // In Next.js, redirects throw an error. In production, the message is omitted.
+            // If it's a redirect, we shouldn't show an error.
+            if (err.message && (err.message.includes("NEXT_REDIRECT") || err.digest?.includes("NEXT_REDIRECT"))) {
+                return;
+            }
+            // If we are here, it's a real error.
+            setError("An unexpected error occurred. Please try again.")
+            console.error(err)
         }
     }
 

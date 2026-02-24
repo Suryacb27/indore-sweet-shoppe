@@ -18,7 +18,7 @@ export default async function Navbar() {
                 .from("profiles")
                 .select("role")
                 .eq("id", user.id)
-                .single()
+                .maybeSingle()
         ]);
         cartCount = count || 0;
         role = profile?.role || "customer";

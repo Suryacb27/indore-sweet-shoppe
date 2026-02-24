@@ -13,20 +13,6 @@ interface AuthLayoutProps {
 export default function AuthLayout({ children, title, subtitle, activeTab }: AuthLayoutProps) {
     return (
         <div className="min-h-screen bg-[#f8f7f5] dark:bg-[#221c10] text-slate-900 dark:text-slate-100 flex flex-col font-['Newsreader',_serif]">
-            {/* Header */}
-            <header className="w-full border-b border-[#f2a60d]/20 bg-[#f8f7f5]/80 backdrop-blur-md sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                    <div className="flex items-center gap-12">
-                        <Link href="/" className="flex items-center gap-3">
-                            <div className="text-[#f2a60d]">
-                                <span className="material-symbols-outlined text-4xl leading-none">bakery_dining</span>
-                            </div>
-                            <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Indore Sweet Shoppe</h1>
-                        </Link>
-                    </div>
-                </div>
-            </header>
-
             {/* Main Content Area */}
             <main className="flex-grow flex items-center justify-center py-12 px-6">
                 <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-2xl border border-[#f2a60d]/20">
@@ -57,8 +43,8 @@ export default function AuthLayout({ children, title, subtitle, activeTab }: Aut
                                 <Link
                                     href="/login"
                                     className={`flex-1 py-4 text-sm font-bold border-b-2 text-center tracking-wide uppercase transition-colors ${activeTab === "login"
-                                            ? "border-[#f2a60d] text-[#f2a60d]"
-                                            : "border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                                        ? "border-[#f2a60d] text-[#f2a60d]"
+                                        : "border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
                                         }`}
                                 >
                                     Login
@@ -66,8 +52,8 @@ export default function AuthLayout({ children, title, subtitle, activeTab }: Aut
                                 <Link
                                     href="/signup"
                                     className={`flex-1 py-4 text-sm font-bold border-b-2 text-center tracking-wide uppercase transition-colors ${activeTab === "signup"
-                                            ? "border-[#f2a60d] text-[#f2a60d]"
-                                            : "border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                                        ? "border-[#f2a60d] text-[#f2a60d]"
+                                        : "border-transparent text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
                                         }`}
                                 >
                                     Sign Up
