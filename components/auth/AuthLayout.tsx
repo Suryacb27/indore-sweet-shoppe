@@ -67,7 +67,7 @@ export default function AuthLayout({ children, title, subtitle, activeTab }: Aut
                         {/* Admin Access Footer */}
                         <div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
                             <p className="text-sm text-slate-500 mb-4">Are you a part of our management team?</p>
-                            <Link href="/login" className="inline-flex items-center gap-2 text-[#f2a60d] font-bold hover:underline transition-all">
+                            <Link href="/admin/login" className="inline-flex items-center gap-2 text-[#f2a60d] font-bold hover:underline transition-all">
                                 <span className="material-symbols-outlined text-xl">admin_panel_settings</span>
                                 <span>Admin Access</span>
                             </Link>

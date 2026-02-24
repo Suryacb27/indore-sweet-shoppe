@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { X, Menu, Search, ShoppingBag, User, ChevronRight } from "lucide-react";
+import { logout } from "@/actions/auth";
 
 interface MobileMenuProps {
     cartCount: number;
@@ -118,7 +119,7 @@ export default function MobileMenu({ cartCount, user, role = "customer" }: Mobil
                         </Link>
 
                         {user && (
-                            <form action="/api/auth/signout" method="POST">
+                            <form action={logout}>
                                 <button
                                     type="submit"
                                     className="w-full flex items-center justify-center gap-2 p-4 rounded-xl border border-red-100 text-red-500 font-black text-[10px] uppercase tracking-widest hover:bg-red-50 transition-colors"

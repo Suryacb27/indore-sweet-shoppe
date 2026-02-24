@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import MobileMenu from "./MobileMenu";
+import { logout } from "@/actions/auth";
 
 export default async function Navbar() {
     const supabase = await createClient();
@@ -69,7 +70,7 @@ export default async function Navbar() {
                                         <span className="material-symbols-outlined">person</span>
                                     </Link>
                                 )}
-                                <form action="/api/auth/signout" method="POST" className="hidden sm:block">
+                                <form action={logout} className="hidden sm:block">
                                     <button className="p-2 hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-full transition-colors">
                                         <span className="material-symbols-outlined">logout</span>
                                     </button>

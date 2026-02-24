@@ -41,10 +41,13 @@ export const updateSession = async (request: NextRequest) => {
         // https://supabase.com/docs/guides/auth/server-side/nextjs
         const { data: { user } } = await supabase.auth.getUser()
 
-        // Protect /admin routes
-        if (request.nextUrl.pathname.startsWith('/admin')) {
+        // Protect /admin routes (but not /admin/login itself)
+        if (
+            request.nextUrl.pathname.startsWith('/admin') &&
+            !request.nextUrl.pathname.startsWith('/admin/login')
+        ) {
             if (!user) {
-                return NextResponse.redirect(new URL('/login', request.url))
+                return NextResponse.redirect(new URL('/admin/login', request.url))
             }
 
             // Fetch role from profiles

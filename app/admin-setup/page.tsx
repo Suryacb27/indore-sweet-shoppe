@@ -1,8 +1,13 @@
 import { adminBootstrap } from "@/actions/auth"
 import { createClient } from "@/lib/supabase/server"
-import { redirect } from "next/navigation"
+import { notFound } from "next/navigation"
 import Link from "next/link"
 import { Sparkles, ArrowRight, User, Lock, ShieldCheck } from "lucide-react"
+
+// Only accessible in test mode — returns 404 in production (Vercel env won't have AUTH_MODE=test)
+if (process.env.AUTH_MODE !== "test") {
+    notFound()
+}
 
 export default async function AdminSetupPage({
     searchParams,

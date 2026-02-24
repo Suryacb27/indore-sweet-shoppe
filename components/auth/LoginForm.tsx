@@ -10,12 +10,9 @@ export default function LoginForm() {
 
     const handleSubmit = async (formData: FormData) => {
         setError(null)
-        try {
-            await login(formData)
-        } catch (err: any) {
-            if (err.message && !err.message.includes("NEXT_REDIRECT")) {
-                setError(err.message)
-            }
+        const result = await login(formData)
+        if (result?.error) {
+            setError(result.error)
         }
     }
 
