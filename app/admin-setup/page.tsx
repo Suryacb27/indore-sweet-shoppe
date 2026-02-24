@@ -1,21 +1,18 @@
-import { adminBootstrap } from "@/actions/auth"
 import { createClient } from "@/lib/supabase/server"
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { Sparkles, ArrowRight, User, Lock, ShieldCheck } from "lucide-react"
+import { Sparkles, ArrowRight, ShieldCheck } from "lucide-react"
+import AdminSetupForm from "@/components/auth/AdminSetupForm"
 
-
-
-export default async function AdminSetupPage({
-    searchParams,
-}: {
-    searchParams: { message: string }
+export default async function AdminSetupPage(props: {
+    searchParams: Promise<{ message?: string }>
 }) {
     // Only accessible in test mode — returns 404 in production (Vercel env won't have AUTH_MODE=test)
     if (process.env.AUTH_MODE !== "test") {
         notFound()
     }
 
+    const { message } = await props.searchParams
     const supabase = await createClient()
 
     // Check if any admin exists to disable the page if one does
@@ -34,8 +31,8 @@ export default async function AdminSetupPage({
                     </div>
                     <h2 className="text-3xl font-black text-slate-900 dark:text-slate-100 tracking-tighter mb-4">Setup Disabled</h2>
                     <p className="text-slate-500 dark:text-slate-400 font-bold mb-8">An administrator already exists for this system. Please use the standard login page.</p>
-                    <Link href="/login" className="premium-button inline-flex items-center gap-3">
-                        Go to Login <ArrowRight className="w-5 h-5" />
+                    <Link href="/admin/login" className="premium-button inline-flex items-center gap-3">
+                        Go to Admin Login <ArrowRight className="w-5 h-5" />
                     </Link>
                 </div>
             </div>
@@ -54,36 +51,11 @@ export default async function AdminSetupPage({
                         <p className="text-slate-500 font-bold text-sm tracking-wide">Securely bootstrap the first administrator for Indore Sweet Shoppe.</p>
                     </div>
 
-                    <form action={adminBootstrap} className="space-y-6">
-                        <div className="space-y-5">
-                            <div className="space-y-2 group">
-                                <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1 transition-colors group-focus-within:text-primary">
-                                    <User className="w-3 h-3" /> Admin Name
-                                </label>
-                                <input id="name" name="name" type="text" required className="w-full px-6 py-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 shadow-sm transition-all" placeholder="Master Admin" />
-                            </div>
-                            <div className="space-y-2 group">
-                                <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1 transition-colors group-focus-within:text-primary">
-                                    <Lock className="w-3 h-3" /> Admin Email
-                                </label>
-                                <input id="email" name="email" type="email" required className="w-full px-6 py-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 shadow-sm transition-all" placeholder="admin@indoresweetshoppe.com" />
-                            </div>
-                            <div className="space-y-2 group">
-                                <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1 transition-colors group-focus-within:text-primary">
-                                    <Lock className="w-3 h-3" /> Secure Password
-                                </label>
-                                <input id="password" name="password" type="password" required className="w-full px-6 py-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl focus:ring-2 focus:ring-primary outline-none font-bold text-slate-900 dark:text-slate-100 shadow-sm transition-all" placeholder="••••••••" />
-                            </div>
-                        </div>
+                    <AdminSetupForm />
 
-                        <button type="submit" className="premium-button w-full flex items-center justify-center gap-3 text-lg py-5 group">
-                            Initialize First Admin <ShieldCheck className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                        </button>
-                    </form>
-
-                    {searchParams?.message && (
+                    {message && (
                         <div className="mt-8 p-4 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/10 flex items-center gap-4">
-                            <p className="text-xs font-black text-primary uppercase tracking-widest">{searchParams.message}</p>
+                            <p className="text-xs font-black text-primary uppercase tracking-widest">{message}</p>
                         </div>
                     )}
                 </div>
@@ -104,3 +76,4 @@ export default async function AdminSetupPage({
         </div>
     )
 }
+

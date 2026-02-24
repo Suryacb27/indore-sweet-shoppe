@@ -77,7 +77,7 @@ export async function adminBootstrap(formData: FormData) {
         .maybeSingle()
 
     if (existingAdmin) {
-        throw new Error("Setup disabled: Admin already exists.")
+        return { error: "Setup is disabled. An administrator already exists." }
     }
 
     const email = formData.get("email") as string
@@ -96,7 +96,7 @@ export async function adminBootstrap(formData: FormData) {
     })
 
     if (error) {
-        throw new Error(error.message)
+        return { error: error.message }
     }
 
     if (data.user) {
@@ -110,11 +110,11 @@ export async function adminBootstrap(formData: FormData) {
 
         if (profileError) {
             console.error("Admin Profile creation error:", profileError)
-            throw new Error("Admin user created but profile setup failed.")
+            return { error: "Admin account created but profile setup failed. Contact support." }
         }
     }
 
-    redirect("/")
+    redirect("/admin/login?created=1")
 }
 
 export async function logout() {

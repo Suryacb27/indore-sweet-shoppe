@@ -12,13 +12,17 @@
 
 ## Current Position
 
-- **Phase 1**: ✅ Complete — Auth Foundation Cleanup
-- **Phase 2**: ✅ Complete — Admin Login Route
-- **Phase 3**: ⬜ Not Started — End-to-End Verification (manual browser tests)
+- **Phase 1**: ✅ Complete — Server Action Hardening
+- **Phase 2**: ⬜ Not Started — End-to-End Verification
 
 ## Last Session Summary
 
-Full auth refactor executed and committed (`2de069b`):
+Hardened admin auth system focused on server action robustness (`03f2993`):
+
+- `adminBootstrap()` → returns `{ error }` instead of throwing; redirects to `/admin/login?created=1`
+- `/admin-setup` → converted to Client Component (for error state) with async `searchParams` fix for Next.js 16
+- `AdminSetupForm` → new client component created for inline error display
+- Storage approach verified: `profiles.role` used consistently across all gates
 
 - `actions/auth.ts` → `login()` returns `{ error }` instead of throwing; added `adminLogin()` with role guard + non-admin signout
 - `Navbar.tsx` + `MobileMenu.tsx` → logout uses `form action={logout}` server action
