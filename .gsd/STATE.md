@@ -6,24 +6,38 @@
 
 **Indore Sweet Shoppe** — Next.js 16 / Supabase e-commerce for premium Indian sweets.
 
+## Current Milestone
+
+**Auth Stabilization and Role Separation**
+
+## Current Position
+
+- **Phase 1**: ✅ Complete — Auth Foundation Cleanup
+- **Phase 2**: ✅ Complete — Admin Login Route
+- **Phase 3**: ⬜ Not Started — End-to-End Verification (manual browser tests)
+
 ## Last Session Summary
 
-Codebase mapping complete (`/map`).
+Full auth refactor executed and committed (`2de069b`):
 
-- **19 components** identified across layout, auth, admin, ui, sections
-- **5 production dependencies** analyzed (Supabase, Lucide, clsx, tailwind-merge)
-- **6 server action files** mapped (auth, cart, orders, admin x3)
-- **11 technical debt items** found
-- **0 tests** present
+- `actions/auth.ts` → `login()` returns `{ error }` instead of throwing; added `adminLogin()` with role guard + non-admin signout
+- `Navbar.tsx` + `MobileMenu.tsx` → logout uses `form action={logout}` server action
+- `app/api/auth/signout/route.ts` → **deleted** (replaced by server action)
+- `app/admin-setup/page.tsx` → guarded by `AUTH_MODE=test` env flag
+- `.env.local` → `AUTH_MODE=test` added
+- `lib/supabase/middleware.ts` → redirects `/admin/*` to `/admin/login`; excludes `/admin/login` from guard
+- `app/admin/layout.tsx` → redirects unauthenticated to `/admin/login`
+- `app/admin/login/page.tsx` → **new** dedicated admin login page with dark UI
+- `components/auth/AuthLayout.tsx` → Admin Access link fixed to `/admin/login`
 
-## Current Focus
+## Next Steps
 
-Ready for `/plan` — use `ARCHITECTURE.md` and `STACK.md` for full context.
+Phase 3 — run manual verification tests against all 9 SPEC acceptance criteria.
 
 ## Known Gaps / Decisions Pending
 
 - No payment gateway integrated (COD assumed)
 - No image upload / Supabase Storage configured
-- Product ratings are placeholder values (no DB table)
-- Search bar is decorative (no routing)
-- Delivery fee is hardcoded in `actions/orders.ts`
+- Product ratings are placeholder values
+- Search bar is decorative
+- Delivery fee hardcoded in `actions/orders.ts`
