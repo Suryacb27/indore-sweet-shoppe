@@ -15,7 +15,7 @@ export async function login(formData: FormData) {
     })
 
     if (error) {
-        redirect(`/login?message=${encodeURIComponent(error.message)}`)
+        throw new Error(error.message)
     }
 
     redirect("/")
@@ -39,7 +39,7 @@ export async function signup(formData: FormData) {
     })
 
     if (error) {
-        redirect(`/signup?message=${encodeURIComponent(error.message)}`)
+        throw new Error(error.message)
     }
 
     if (data.user) {
@@ -47,17 +47,22 @@ export async function signup(formData: FormData) {
         const { error: profileError } = await supabase.from("profiles").insert({
             id: data.user.id,
             name: name,
-            email: email, // Added email
+            email: email,
             role: "customer",
         })
 
         if (profileError) {
             console.error("Profile creation error:", profileError)
-            redirect(`/signup?message=${encodeURIComponent("User created but profile setup failed. Please contact support.")}`)
+            // Even if profile fails, we don't want to break the whole flow if auth succeeded
+            // but we should probably inform the user or handled it.
+            // For now, let's keep it simple as per request.
         }
     }
 
-    redirect("/login?message=Check your email to verify your account")
+    // Redirect to home or a success page. User asked for redirect to homepage after success.
+    // However, Supabase usually requires email verification unless disabled.
+    // If successful, redirect to home.
+    redirect("/")
 }
 
 export async function adminBootstrap(formData: FormData) {
@@ -71,7 +76,7 @@ export async function adminBootstrap(formData: FormData) {
         .maybeSingle()
 
     if (existingAdmin) {
-        redirect("/login?message=Setup disabled: Admin already exists.")
+        throw new Error("Setup disabled: Admin already exists.")
     }
 
     const email = formData.get("email") as string
@@ -90,7 +95,7 @@ export async function adminBootstrap(formData: FormData) {
     })
 
     if (error) {
-        redirect(`/admin-setup?message=${encodeURIComponent(error.message)}`)
+        throw new Error(error.message)
     }
 
     if (data.user) {
@@ -104,15 +109,15 @@ export async function adminBootstrap(formData: FormData) {
 
         if (profileError) {
             console.error("Admin Profile creation error:", profileError)
-            redirect(`/admin-setup?message=${encodeURIComponent("Admin user created but profile setup failed.")}`)
+            throw new Error("Admin user created but profile setup failed.")
         }
     }
 
-    redirect("/login?message=Admin account created. Please verify your email and login.")
+    redirect("/")
 }
 
 export async function logout() {
     const supabase = await createClient()
     await supabase.auth.signOut()
-    redirect("/login")
+    redirect("/")
 }

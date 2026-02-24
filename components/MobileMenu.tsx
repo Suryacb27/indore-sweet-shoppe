@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, ShoppingCart, LayoutDashboard, Package, Home, LogOut } from "lucide-react"
+import { Menu, X, ShoppingCart, LayoutDashboard, Package, Home, LogOut, User } from "lucide-react"
 import Link from "next/link"
 
 interface MobileMenuProps {
@@ -61,21 +61,39 @@ export default function MobileMenu({ user, role, cartCount }: MobileMenuProps) {
                             </Link>
                         )}
 
-                        <div className="pt-8 border-t border-orange-50">
+                        <div className="pt-8 border-t border-orange-50 flex flex-col gap-4">
                             {user ? (
-                                <form action="/api/auth/signout" method="POST">
-                                    <button type="submit" className="flex items-center gap-4 text-sm font-black text-red-500 w-full px-2 uppercase tracking-widest">
-                                        <LogOut className="w-5 h-5 text-red-400" /> Secure Sign Out
-                                    </button>
-                                </form>
+                                <>
+                                    <Link
+                                        href="/account"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex items-center gap-4 text-sm font-black text-gray-900 hover:text-orange-600 transition-all uppercase tracking-widest px-2"
+                                    >
+                                        <User className="w-5 h-5 text-orange-600" /> My Account
+                                    </Link>
+                                    <form action="/api/auth/signout" method="POST">
+                                        <button type="submit" className="flex items-center gap-4 text-sm font-black text-red-500 w-full px-2 uppercase tracking-widest text-left">
+                                            <LogOut className="w-5 h-5 text-red-400" /> Secure Sign Out
+                                        </button>
+                                    </form>
+                                </>
                             ) : (
-                                <Link
-                                    href="/login"
-                                    onClick={() => setIsOpen(false)}
-                                    className="flex items-center justify-center w-full py-5 bg-gray-900 text-white rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-xl hover:bg-orange-600 transition-all"
-                                >
-                                    Sign In
-                                </Link>
+                                <>
+                                    <Link
+                                        href="/login"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex items-center justify-center w-full py-5 bg-gray-100 text-gray-900 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-orange-100 transition-all"
+                                    >
+                                        Sign In
+                                    </Link>
+                                    <Link
+                                        href="/signup"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex items-center justify-center w-full py-5 bg-gray-900 text-white rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-xl hover:bg-orange-600 transition-all"
+                                    >
+                                        Sign Up
+                                    </Link>
+                                </>
                             )}
                         </div>
                     </nav>
