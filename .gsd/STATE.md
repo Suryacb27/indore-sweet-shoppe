@@ -13,16 +13,17 @@
 ## Current Position
 
 - **Phase 1**: ✅ Complete — Server Action Hardening
-- **Phase 2**: ⬜ Not Started — End-to-End Verification
+- **Phase 2**: ✅ Complete — End-to-End Verification & Security Hardening
 
 ## Last Session Summary
 
-Hardened admin auth system focused on server action robustness (`03f2993`):
+Hardened admin auth system focused on server action robustness and route security (`ba45f12`):
 
 - `adminBootstrap()` → returns `{ error }` instead of throwing; redirects to `/admin/login?created=1`
 - `/admin-setup` → converted to Client Component (for error state) with async `searchParams` fix for Next.js 16
-- `AdminSetupForm` → new client component created for inline error display
-- Storage approach verified: `profiles.role` used consistently across all gates
+- **Redirect Loop Fix**: Moved admin dashboard routes into `app/admin/(dashboard)` group to exclude `/admin/login` from the authentication-enforcing layout.
+- Storage approach verified: `profiles.role` used consistently across all server-side gates.
+- Verified production readiness with `npm run build` (clean cache).
 
 - `actions/auth.ts` → `login()` returns `{ error }` instead of throwing; added `adminLogin()` with role guard + non-admin signout
 - `Navbar.tsx` + `MobileMenu.tsx` → logout uses `form action={logout}` server action
