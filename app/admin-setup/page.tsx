@@ -4,16 +4,18 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { Sparkles, ArrowRight, User, Lock, ShieldCheck } from "lucide-react"
 
-// Only accessible in test mode — returns 404 in production (Vercel env won't have AUTH_MODE=test)
-if (process.env.AUTH_MODE !== "test") {
-    notFound()
-}
+
 
 export default async function AdminSetupPage({
     searchParams,
 }: {
     searchParams: { message: string }
 }) {
+    // Only accessible in test mode — returns 404 in production (Vercel env won't have AUTH_MODE=test)
+    if (process.env.AUTH_MODE !== "test") {
+        notFound()
+    }
+
     const supabase = await createClient()
 
     // Check if any admin exists to disable the page if one does
