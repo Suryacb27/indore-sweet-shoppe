@@ -53,7 +53,7 @@ export async function signup(formData: FormData) {
 
         if (profileError) {
             console.error("Profile creation error:", profileError)
-            return { error: "User created but profile setup failed. Please contact support." }
+            return { error: `User created but profile setup failed: ${profileError.message}` }
         }
     }
 
