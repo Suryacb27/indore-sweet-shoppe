@@ -1,8 +1,11 @@
 {
   "routes": [
     {
-      "src": "^/admin$",
-      "dest": "/admin/login"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/"
     }
   ]
 }
